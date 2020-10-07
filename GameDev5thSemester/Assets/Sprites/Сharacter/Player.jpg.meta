@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 26e0806c589bd564488b0b5c3ad87cd5
+=======
+guid: 7497a44c61e5a4b4dafde77c1fbff502
+>>>>>>> dev_shurygin
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

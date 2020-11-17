@@ -43,6 +43,7 @@ public class Test : MonoBehaviour
                     break;
                 case Number.b:
                     {
+                        AnimMiniGaem.SetTrigger("IsTriggered");
                         Debug.Log("1");
                     }
                     break;

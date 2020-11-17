@@ -9,6 +9,8 @@ public class Test : MonoBehaviour
     public int h = 0;
     public GameObject[] MyObjects;
     public Number abc = Number.d;
+    public Animator AnimMiniGaem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,8 @@ public class Test : MonoBehaviour
             {
                 case Number.a:
                     {
+
+                        AnimMiniGaem.SetTrigger("IsTriggered");
                         Debug.Log("0");
                     }
                     break;

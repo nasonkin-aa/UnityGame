@@ -11,6 +11,7 @@ public class ButtonTrigger: MonoBehaviour
     public GameObject[] OtheFrame;
     public static int TriggerFlag = 0;
     public static bool ButtonInTrigger =false;
+   
     private void Start()
     {
        
@@ -18,8 +19,9 @@ public class ButtonTrigger: MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.gameObject.tag == "Game1")
+        if (other.CompareTag("Player") )
         {
+            
             Debug.Log("lol123");
             /* Debug.Log("OH SHIT A RAT");
              TriggerFlag = 0;
@@ -31,7 +33,7 @@ public class ButtonTrigger: MonoBehaviour
              }*/
 
         }
-        else if(other.CompareTag("Player") && other.gameObject.tag == "Game2")
+        else if(other.CompareTag("Player") )
         {
             
             Debug.Log("OH SHIT A RAT");
@@ -51,6 +53,7 @@ public class ButtonTrigger: MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+           
             Debug.Log("lol");
             ButtonInTrigger = false;
 

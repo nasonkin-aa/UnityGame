@@ -11,5 +11,6 @@ public class Button : MonoBehaviour
         
     }
     private void OnMouseDown() => flag = true;
+
     private void OnMouseUp() => flag = false;
 }

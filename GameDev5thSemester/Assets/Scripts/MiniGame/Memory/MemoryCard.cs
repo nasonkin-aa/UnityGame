@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class MemoryCard : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject CardBack;
+    public void OnMouseDown()
     {
-        
+        if (CardBack.activeSelf)
+        {
+            CardBack.SetActive(false);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private SceneController controller;
+    private int _id;
+    public int id
     {
-        
+        get
+        {
+            return _id;
+        }
+    }
+    public void SetCard(int id, Sprite image)
+    {
+        _id = id;
+        GetComponent<SpriteRenderer>().sprite = image;
     }
 }
+

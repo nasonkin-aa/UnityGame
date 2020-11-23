@@ -10,6 +10,7 @@ public class Test : MonoBehaviour
     public GameObject[] MyObjects;
     public Number abc = Number.d;
     public Animator AnimMiniGaem;
+    
 
     // Start is called before the first frame update
     void Start()

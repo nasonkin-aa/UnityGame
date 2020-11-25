@@ -12,8 +12,9 @@ public class SceneController : MonoBehaviour
 
     [SerializeField] private MemoryCard originalCard;
     [SerializeField] private Sprite[] images;
-    
-    
+    [SerializeField] private GameObject Parent;
+
+
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class SceneController : MonoBehaviour
                 else
                 {
                     card = Instantiate(originalCard) as MemoryCard;
-
+                    card.transform.SetParent(Parent.transform);
                 }
                 int id = Random.Range(0, images.Length);
                 originalCard.SetCard(id, images[id]);

@@ -7,6 +7,7 @@ public class MemoryCard : MonoBehaviour
     [SerializeField] private GameObject CardBack;
     public void OnMouseDown()
     {
+        Debug.Log("testing 1 2 3");
         if (CardBack.activeSelf)
         {
             CardBack.SetActive(false);

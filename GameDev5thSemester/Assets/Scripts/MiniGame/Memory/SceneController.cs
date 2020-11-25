@@ -19,6 +19,9 @@ public class SceneController : MonoBehaviour
     void Start()
     {
         Vector3 startPos = originalCard.transform.position;
+        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
+        numbers = ShuffleArray(numbers);
+        
         for (int i =0; i<gridCols; i++)
         {
             for (int j =0;j< gridRows; j++)
@@ -32,20 +35,32 @@ public class SceneController : MonoBehaviour
                 {
                     card = Instantiate(originalCard) as MemoryCard;
                     card.transform.SetParent(Parent.transform);
-                    card.transform.localScale = new Vector3(23.3f, 23.3f, 23.3f);
+                    card.transform.localScale = new Vector3(40, 40,40);
                 }
-                int id = Random.Range(0, images.Length);
-                originalCard.SetCard(id, images[id]);
+
+                int index = j * gridCols + i;
+                int id = numbers[index];
+                card.SetCard(id, images[id]);
+
+                
                 float posX = -(offsetY * i) + startPos.x;
                 float posY = -(offsetY * j) + startPos.y;
                 card.transform.position = new Vector3(posX, posY, startPos.z);
             }
         }
-
-
-        
         
     }
+    private int[] ShuffleArray(int[] numbers)
+    {
+        int[] newArray = numbers.Clone() as int[];
+        for (int i = 0; i < newArray.Length; i++)
+        {
+            int tmp = newArray[i];
+            int r = Random.RandomRange(i, newArray.Length);
+            newArray[i] = newArray[r];
+            newArray[r] = tmp;
+        }
+        return newArray;
+    }
 
-    
 }

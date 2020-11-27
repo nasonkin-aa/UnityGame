@@ -16,6 +16,7 @@ public class SceneController : MonoBehaviour
 
     private MemoryCard FirstR;
     private MemoryCard SecondR;
+    private int Score = 0;
 
     public bool CanReveal
     {
@@ -31,8 +32,25 @@ public class SceneController : MonoBehaviour
         else
         {
             SecondR = card;
-            Debug.Log("Match" + (FirstR.id == SecondR.id));
+            StartCoroutine(CheckMatch());
         }
+    }
+    private IEnumerator CheckMatch()
+    {
+        if (FirstR.id == SecondR.id)
+        {
+            Score++;
+            Debug.Log("score" + Score);
+        }
+        else
+        {
+            yield return new WaitForSeconds(.5f);
+
+            FirstR.Unreveal();
+            SecondR.Unreveal();
+        }
+        FirstR = null;
+        SecondR = null;
     }
 
 

@@ -13,10 +13,14 @@ public class SceneController : MonoBehaviour
     [SerializeField] private MemoryCard originalCard;
     [SerializeField] private Sprite[] images;
     [SerializeField] private GameObject Parent;
+    [SerializeField] private TextMesh ScoreLabel;
+
 
     private MemoryCard FirstR;
     private MemoryCard SecondR;
     private int Score = 0;
+
+
 
     public bool CanReveal
     {
@@ -40,7 +44,7 @@ public class SceneController : MonoBehaviour
         if (FirstR.id == SecondR.id)
         {
             Score++;
-            Debug.Log("score" + Score);
+            ScoreLabel.text= "score" + Score;
         }
         else
         {

@@ -14,6 +14,26 @@ public class SceneController : MonoBehaviour
     [SerializeField] private Sprite[] images;
     [SerializeField] private GameObject Parent;
 
+    private MemoryCard FirstR;
+    private MemoryCard SecondR;
+
+    public bool CanReveal
+    {
+        get { return SecondR == null; }
+    }
+
+    public void CardRevealed(MemoryCard card)
+    {
+        if(FirstR == null)
+        {
+            FirstR = card;
+        }
+        else
+        {
+            SecondR = card;
+            Debug.Log("Match" + (FirstR.id == SecondR.id));
+        }
+    }
 
 
     void Start()

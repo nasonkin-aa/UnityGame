@@ -163,7 +163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 60252761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4fc5eaaaeb86824f88fc8f4c54146ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 26354e2c1ebeb8e4295f1f4856356448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AnimMiniGaem: {fileID: 980201291}
@@ -253,7 +253,6 @@ GameObject:
   m_Component:
   - component: {fileID: 86690102}
   - component: {fileID: 86690101}
-  - component: {fileID: 86690104}
   m_Layer: 0
   m_Name: krisa
   m_TagString: Untagged
@@ -326,22 +325,6 @@ Transform:
   m_Father: {fileID: 861834838}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &86690104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86690100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce56b403aadb68b40b4569569c74db86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  h: 0
-  MyObjects: []
-  abc: 3
-  AnimMiniGaem: {fileID: 0}
 --- !u!1 &146898030
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +352,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 146898030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce56b403aadb68b40b4569569c74db86, type: 3}
+  m_Script: {fileID: 11500000, guid: b4f6f8976551fdb4582e0eaec89227c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   h: 0
@@ -494,7 +477,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 304146325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce56b403aadb68b40b4569569c74db86, type: 3}
+  m_Script: {fileID: 11500000, guid: b4f6f8976551fdb4582e0eaec89227c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   h: 0
@@ -1428,7 +1411,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1044482485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4fc5eaaaeb86824f88fc8f4c54146ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 26354e2c1ebeb8e4295f1f4856356448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AnimMiniGaem: {fileID: 1076706777}
@@ -1644,7 +1627,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160725499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97, y: -218, z: 0}
+  m_LocalPosition: {x: 81, y: -194, z: 0}
   m_LocalScale: {x: 12.376635, y: 9.981086, z: 44.545498}
   m_Children: []
   m_Father: {fileID: 730045631}
@@ -1821,7 +1804,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1244951742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dd2776136facd84d9fa33d7f1f1bca0, type: 3}
+  m_Script: {fileID: 11500000, guid: 912a3c1a742067a48bca71e463c782c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   face: 0

@@ -5,10 +5,13 @@ using UnityEngine;
 public class Dialog_NextClick : MonoBehaviour {
 	public GameObject Text1;
 	public GameObject Text2;
-	private bool isText1 =true;
+    public GameObject joystic, image1;
+    private bool isText1 =true;
 	public NPC_Task npc_taskScript;
-    public bool Fin_Dialog;
+    public Quest_Event QE;
+    public bool Fin_Dialog, dialog_on;
     public GameObject ObjectQuest;
+    public Animator AnimMiniGaem;
 
     // Use this for initialization
     void Start () {
@@ -17,30 +20,37 @@ public class Dialog_NextClick : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
-			if (isText1 == true) {
-				isText1 = false;
-			}
-			else{
-                if (Fin_Dialog == false)
+        if (dialog_on == true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (isText1 == true)
                 {
-                    isText1 = true;
-                    ObjectQuest.SetActive(true);
-                    npc_taskScript.EndDialog = true;
+                    isText1 = false;
                 }
                 else
                 {
-                    isText1 = true;
-                    npc_taskScript.Fin_Dialog = true;
+                    if (npc_taskScript.EndDialog == false)
+                    {
+                        npc_taskScript.EndDialog = true;
+                        QE.Quest1 = true;
+                        dialog_on = false;
+                        AnimMiniGaem.SetTrigger("IsTriggered");
+                        joystic.SetActive(true);
+                        image1.SetActive(false);
+                    }
                 }
-			}
-		}
-		if (isText1 == true) {
-			Text1.SetActive (true);
-			Text2.SetActive (false);
-		} else {
-			Text1.SetActive (false);
-			Text2.SetActive (true);
-		}
+            }
+            if (isText1 == true)
+            {
+                Text1.SetActive(true);
+                Text2.SetActive(false);
+            }
+            else
+            {
+                Text1.SetActive(false);
+                Text2.SetActive(true);
+            }
+        }
 	}
 }

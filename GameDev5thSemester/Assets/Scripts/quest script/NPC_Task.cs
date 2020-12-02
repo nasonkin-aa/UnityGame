@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NPC_Task : MonoBehaviour {
-	public bool EndDialog;
-	public GameObject Dialog1, Dialog2, joystic;
+	public GameObject joystic, image1;
 	public Quest_Event QE;
-    public bool Fin_Dialog;
+    public Dialog_NextClick DN;
+    public bool Fin_Dialog, EndDialog;
     private bool onhide;
+    public Animator AnimMiniGaem;
 
     // Use this for initialization
     void Start () {
@@ -16,7 +17,7 @@ public class NPC_Task : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (QE.end_Quest1 == true)
+        /*if (QE.end_Quest1 == true)
         {
             Fin_Dialog = true;
         }
@@ -32,33 +33,25 @@ public class NPC_Task : MonoBehaviour {
             QE.Quest1 = false;
             Dialog1.SetActive(false);
             joystic.SetActive(true);
-        }
+        }*/
 	}
-	void OnTriggerEnter2D(Collider2D col)
+	void OnTriggerStay2D(Collider2D col)
 	{
-		if (col.tag == "Player") {
-            if (Fin_Dialog == false)
+        if (Button.flag == true)
+        {
+            if (col.tag == "Player")
             {
-                Time.timeScale = 0;
-                if (QE.end_Quest1 == false)
+                if (EndDialog == false)
                 {
-                    Dialog1.SetActive(true);
-                    joystic.SetActive(false);
-                }
-                else
-                {
-                    Dialog2.SetActive(true);
-                    joystic.SetActive(false);
+                    if (QE.end_Quest1 == false)
+                    {
+                        DN.dialog_on = true;
+                        AnimMiniGaem.SetTrigger("IsTriggered");
+                        joystic.SetActive(false);
+                    }
                 }
             }
-            else
-            {
-                if (onhide == false)
-                {
-                    Dialog2.SetActive(true);
-                    onhide = true;
-                }
-            }
+            Button.flag = false;
         }
 	}
 }

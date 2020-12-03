@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-[Ll]ibrary
-[Tt]emp
-[Oo]bj
-[Bb]uild
-[Bb]uilds
-[Ll]ogs
-[Uu]ser[Ss]ettings
+GameDev5thSemester/[Ll]ibrary
+GameDev5thSemester/[Tt]emp
+GameDev5thSemester/[Oo]bj
+GameDev5thSemester/[Bb]uild
+GameDev5thSemester/[Bb]uilds
+GameDev5thSemester/[Ll]ogs
+GameDev5thSemester/[Uu]ser[Ss]ettings
 
 
 

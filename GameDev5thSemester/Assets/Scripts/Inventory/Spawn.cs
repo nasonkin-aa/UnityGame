@@ -6,6 +6,8 @@ public class Spawn : MonoBehaviour
 {
     public GameObject item;
     private Transform player;
+    public GameObject Parent;
+    private GameObject Items;
 
     private void Start()
     {
@@ -14,7 +16,8 @@ public class Spawn : MonoBehaviour
     }
     public void SpawnDroppedItem()
     {
-        Vector2 playerPos = new Vector2(player.position.x + 5, player.position.y - 0);
-        Instantiate(item, playerPos, Quaternion.identity);
+        Vector3 playerPos = new Vector3(player.position.x + 5, player.position.y - 0,10);
+        Items=Instantiate(item, playerPos, Quaternion.identity);
+        //Items.transform.SetParent(Parent.transform);
     }
 }

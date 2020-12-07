@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject SlotButton;
+    public Quest_Event QE;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class Pickup : MonoBehaviour
                 {
                     inventory.isFull[i] = true;
                     Instantiate(SlotButton, inventory.slots[i].transform);
+                    QE.end_Quest2 = true;
                     Destroy(gameObject);
                     break;
 

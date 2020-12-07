@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Quest_Event : MonoBehaviour {
-	public bool Quest1;
-	public GameObject Text1;
-    public bool end_Quest1;
+	public bool Quest1, Quest2;
+	public GameObject Quest1t, Quest2t;
+    public bool end_Quest1, end_Quest2;
+    public int n = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -18,17 +19,33 @@ public class Quest_Event : MonoBehaviour {
         {
             if (Quest1 == true)
             {
-                Text1.SetActive(true);
+                Quest1t.SetActive(true);
             }
             else
             {
-                Text1.SetActive(false);
+                Quest1t.SetActive(false);
             }
         }
         else
         {
-            Text1.SetActive(false);
+            Quest1t.SetActive(false);
         }
-		
-	}
+
+        if (end_Quest2 == false)
+        {
+            if (Quest2 == true)
+            {
+                Quest2t.SetActive(true);
+            }
+            else
+            {
+                Quest2t.SetActive(false);
+            }
+        }
+        else
+        {
+            Quest2t.SetActive(false);
+        }
+
+    }
 }

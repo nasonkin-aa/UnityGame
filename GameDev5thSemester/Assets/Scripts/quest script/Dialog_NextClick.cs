@@ -33,11 +33,20 @@ public class Dialog_NextClick : MonoBehaviour {
                     if (npc_taskScript.EndDialog == false)
                     {
                         npc_taskScript.EndDialog = true;
-                        QE.Quest1 = true;
                         dialog_on = false;
+                        if (QE.n == 0)
+                        {
+                            QE.Quest1 = true;
+                            image1.SetActive(false);
+                        }
+                        if (QE.n == 1)
+                        {
+                            QE.Quest2 = true;
+                            image1.SetActive(false);
+                        }
                         AnimMiniGaem.SetTrigger("IsTriggered");
                         joystic.SetActive(true);
-                        image1.SetActive(false);
+                        QE.n += 1;
                     }
                 }
             }

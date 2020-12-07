@@ -3,37 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NPC_Task : MonoBehaviour {
-	public GameObject joystic, image1;
+	public GameObject joystic, image1, image2;
 	public Quest_Event QE;
-    public Dialog_NextClick DN;
+    public Dialog_NextClick DN1, DN2;
     public bool Fin_Dialog, EndDialog;
     private bool onhide;
-    public Animator AnimMiniGaem;
+    public Animator QuestW1, QuestW2;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        /*if (QE.end_Quest1 == true)
-        {
-            Fin_Dialog = true;
-        }
-		if (EndDialog == true) {
-			Time.timeScale = 1;
-			QE.Quest1 = true;
-			Dialog1.SetActive (false);
-            joystic.SetActive (true);
-        }
-        if (Fin_Dialog == true)
-        {
-            Time.timeScale = 1;
-            QE.Quest1 = false;
-            Dialog1.SetActive(false);
-            joystic.SetActive(true);
-        }*/
+	void Update ()
+    {
+       
 	}
 	void OnTriggerStay2D(Collider2D col)
 	{
@@ -45,8 +31,14 @@ public class NPC_Task : MonoBehaviour {
                 {
                     if (QE.end_Quest1 == false)
                     {
-                        DN.dialog_on = true;
-                        AnimMiniGaem.SetTrigger("IsTriggered");
+                        DN1.dialog_on = true;
+                        QuestW1.SetTrigger("IsTriggered");
+                        joystic.SetActive(false);
+                    }
+                    else if (QE.end_Quest2 == false && QE.end_Quest1 == true)
+                    {
+                        DN2.dialog_on = true;
+                        QuestW2.SetTrigger("IsTriggered");
                         joystic.SetActive(false);
                     }
                 }

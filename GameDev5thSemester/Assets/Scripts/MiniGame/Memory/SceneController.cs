@@ -20,6 +20,10 @@ public class SceneController : MonoBehaviour
     private MemoryCard SecondR;
     private int Score = 0;
 
+    public GameObject ButtonExit;
+
+
+
 
 
     public bool CanReveal
@@ -29,7 +33,8 @@ public class SceneController : MonoBehaviour
 
     public void CardRevealed(MemoryCard card)
     {
-        if(FirstR == null)
+
+        if (FirstR == null)
         {
             FirstR = card;
         }
@@ -41,6 +46,7 @@ public class SceneController : MonoBehaviour
     }
     private IEnumerator CheckMatch()
     {
+        
         if (FirstR.id == SecondR.id)
         {
             Score++;
@@ -55,11 +61,20 @@ public class SceneController : MonoBehaviour
         }
         FirstR = null;
         SecondR = null;
-    }
+        if (Score == 4)
+        {
+            ButtonExit.SetActive(true);
+        }
 
+
+
+    }
 
     void Start()
     {
+
+        ButtonExit = GameObject.Find("ButtonExit");
+        ButtonExit.SetActive(false);
         Vector3 startPos = originalCard.transform.position;
         int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
         numbers = ShuffleArray(numbers);
@@ -94,6 +109,7 @@ public class SceneController : MonoBehaviour
     }
     private int[] ShuffleArray(int[] numbers)
     {
+    
         int[] newArray = numbers.Clone() as int[];
         for (int i = 0; i < newArray.Length; i++)
         {
@@ -104,5 +120,6 @@ public class SceneController : MonoBehaviour
         }
         return newArray;
     }
+    
 
 }

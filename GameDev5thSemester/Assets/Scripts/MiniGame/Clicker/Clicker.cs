@@ -6,21 +6,26 @@ using UnityEngine.UI;
 public class Clicker : MonoBehaviour
 {
     public int Score=0;
-    public float TimeStart=10f;
+    public float TimeStart = 3f;
     public int MaxScore=10;
     [SerializeField] private TextMesh ScoreLabel;
     [SerializeField] private TextMesh TimeLabel;
+
+    public bool TimerCheck =false;
 
     public void OnMouseDown()
     {
         
         if (Score < MaxScore)
         {
-            Score++;
-            Debug.Log("123");
-            ScoreLabel.text = "score" + Score;
-            //ScoreClick();
-            
+            Score++; 
+            TimerCheck = true;
+
+        }
+        else
+        {
+            TimerCheck = false;
+
         }
         
     }
@@ -37,8 +42,31 @@ public class Clicker : MonoBehaviour
 
     
      public void  FixedUpdate()
+
     {
-        TimeStart -= Time.deltaTime;
-        TimeLabel.text = TimeStart.ToString("F2");
+        ScoreLabel.text = "score" + Score;
+        Check();
+    
+        
     }
+    public void Check()
+    {
+        if (TimerCheck == true)
+        {
+            if (TimeStart <= 0.00f)
+            {
+                Score = 0;
+                TimeStart = 3f;
+            }
+            else
+            {
+                TimeStart -= Time.deltaTime;
+                TimeLabel.text = TimeStart.ToString("F2");
+
+            }
+
+
+        }
+    }
+ 
 }

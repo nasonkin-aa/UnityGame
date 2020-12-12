@@ -1,36 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Clicker : MonoBehaviour
 {
     public int Score=0;
-    public float Time=0f;
+    public float TimeStart=10f;
     public int MaxScore=10;
+    [SerializeField] private TextMesh ScoreLabel;
+    [SerializeField] private TextMesh TimeLabel;
 
-
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
-        if (MaxScore < 10)
+        
+        if (Score < MaxScore)
         {
             Score++;
+            Debug.Log("123");
+            ScoreLabel.text = "score" + Score;
+            //ScoreClick();
+            
         }
         
     }
-    private IEnumerator CheckMatch(int Score)
+    public void ScoreClick()
     {
-        Score++;
-        //return Score;
+        TimeStart -= Time.deltaTime;
+        TimeLabel.text = Mathf.Round(TimeStart).ToString();
     }
 
     void Start()
     {
-        
+        TimeLabel.text = TimeStart.ToString("F2");
     }
 
     
-    void Update()
+     public void  FixedUpdate()
     {
-        
+        TimeStart -= Time.deltaTime;
+        TimeLabel.text = TimeStart.ToString("F2");
     }
 }

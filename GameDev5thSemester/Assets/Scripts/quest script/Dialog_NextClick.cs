@@ -5,12 +5,11 @@ using UnityEngine;
 public class Dialog_NextClick : MonoBehaviour {
 	public GameObject Text1;
 	public GameObject Text2;
-    public GameObject joystic, image1;
+    public GameObject joystic, image1, coin;
     private bool isText1 =true;
 	public NPC_Task npc_taskScript;
     public Quest_Event QE;
     public bool Fin_Dialog, dialog_on;
-    public GameObject ObjectQuest;
     public Animator AnimMiniGaem;
 
     // Use this for initialization
@@ -42,6 +41,8 @@ public class Dialog_NextClick : MonoBehaviour {
                         if (QE.n == 1)
                         {
                             QE.Quest2 = true;
+                            QE.SubQuest2 = true;
+                            coin.SetActive(true);
                             image1.SetActive(false);
                         }
                         AnimMiniGaem.SetTrigger("IsTriggered");

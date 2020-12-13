@@ -5,29 +5,27 @@ using UnityEngine.UI;
 
 public class Clicker : MonoBehaviour
 {
-    public int Score=0;
+    public int Score = 0;
     public float TimeStart = 3f;
     public int MaxScore=10;
     [SerializeField] private TextMesh ScoreLabel;
     [SerializeField] private TextMesh TimeLabel;
+    public GameObject Circle;
+    public GameObject ButtonExit;
 
-    public bool TimerCheck =false;
+    public bool TimerCheck = false;
 
     public void OnMouseDown()
     {
         
         if (Score < MaxScore)
         {
-            Score++; 
-            TimerCheck = true;
-
+            Score++;
+            Circle.transform.localScale += new Vector3(1f, 1.5f, 0);
+            
         }
-        else
-        {
-            TimerCheck = false;
-
-        }
-        
+       
+       
     }
     public void ScoreClick()
     {
@@ -46,8 +44,21 @@ public class Clicker : MonoBehaviour
     {
         ScoreLabel.text = "score" + Score;
         Check();
-    
-        
+
+        if (Score == MaxScore)
+        {
+            Circle.gameObject.GetComponent<Renderer>().material.color = Color.red;
+            TimerCheck = false;
+            ButtonExit.SetActive(true);
+
+        }
+        else if(Score > 0)
+        {
+            TimerCheck = true;
+        }
+       
+
+
     }
     public void Check()
     {

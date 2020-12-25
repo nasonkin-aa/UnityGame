@@ -11,11 +11,13 @@ public class Dialog_NextClick : MonoBehaviour {
     public Quest_Event QE;
     public bool Fin_Dialog, dialog_on;
     public Animator AnimMiniGaem;
+    public int rng;
 
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start ()
+    {
+        npc_taskScript = GameObject.FindGameObjectWithTag("Game3").GetComponent<NPC_Task>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,7 +44,19 @@ public class Dialog_NextClick : MonoBehaviour {
                         {
                             QE.Quest2 = true;
                             QE.SubQuest2 = true;
-                            coin.SetActive(true);
+                            rng = Random.Range(0, 2);
+                            if (rng == 0)
+                            {
+                                Instantiate(coin, new Vector3(-3f, -10f, 10f), Quaternion.identity);
+                            }
+                            if (rng == 1)
+                            {
+                                Instantiate(coin, new Vector3(-7.7f, 6.48f, 10f), Quaternion.identity);
+                            }
+                            if (rng == 2)
+                            {
+                                Instantiate(coin, new Vector3(-29f, -11f, 10f), Quaternion.identity);
+                            }
                             image1.SetActive(false);
                         }
                         AnimMiniGaem.SetTrigger("IsTriggered");

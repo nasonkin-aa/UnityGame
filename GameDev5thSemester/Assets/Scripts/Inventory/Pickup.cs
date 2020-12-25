@@ -11,6 +11,7 @@ public class Pickup : MonoBehaviour
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        QE = GameObject.FindGameObjectWithTag("Event").GetComponent<Quest_Event>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

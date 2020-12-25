@@ -13,8 +13,15 @@ public class NPC_Task : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-		
-	}
+        QE = GameObject.FindGameObjectWithTag("Event").GetComponent<Quest_Event>();
+        joystic = GameObject.FindGameObjectWithTag("cntrl");
+        image1 = GameObject.Find("Image (2)");
+        image2 = GameObject.Find("Image (3)");
+        DN1 = GameObject.Find("Image (2)").GetComponent<Dialog_NextClick>();
+        DN2 = GameObject.Find("Image (3)").GetComponent<Dialog_NextClick>();
+        QuestW1 = GameObject.Find("Image (2)").GetComponent<Animator>();
+        QuestW2 = GameObject.Find("Image (3)").GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update ()

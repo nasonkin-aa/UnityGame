@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Quest_Event : MonoBehaviour {
+
 	public bool Quest1, Quest2, SubQuest2;
-	public GameObject Quest1t, Quest2t, SubQuest2t;
+	public GameObject Quest1t, Quest2t, SubQuest2t, sc;
     public bool end_Quest1, end_Quest2, end_SubQuest2;
     public int n = 0;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start ()
+    {
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,6 +32,7 @@ public class Quest_Event : MonoBehaviour {
         else
         {
             Quest1t.SetActive(false);
+            //sc.GetComponent < Text > = "Score:" + 3;
         }
         //
         if (end_Quest2 == false)

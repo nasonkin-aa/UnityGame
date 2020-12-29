@@ -336,6 +336,7 @@ MonoBehaviour:
   joystic: {fileID: 293735199}
   image1: {fileID: 244271139}
   coin: {fileID: 8010003933500435980, guid: 6d0ea568bcfbc8449ad0268d5011be79, type: 3}
+  krisa: {fileID: 0}
   npc_taskScript: {fileID: 0}
   QE: {fileID: 586065854}
   Fin_Dialog: 0
@@ -3433,6 +3434,7 @@ MonoBehaviour:
   joystic: {fileID: 293735199}
   image1: {fileID: 1419192669}
   coin: {fileID: 0}
+  krisa: {fileID: 0}
   npc_taskScript: {fileID: 0}
   QE: {fileID: 586065854}
   Fin_Dialog: 0
@@ -4823,7 +4825,7 @@ GameObject:
   - component: {fileID: 1927898333}
   - component: {fileID: 1927898332}
   m_Layer: 0
-  m_Name: ButtonTrigger(2)
+  m_Name: ButtonTrigger(2)krisa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,9 +5,9 @@ using UnityEngine;
 public class Dialog_NextClick : MonoBehaviour {
 	public GameObject Text1;
 	public GameObject Text2;
-    public GameObject joystic, image1, coin;
+    public GameObject joystic, image1, coin, krisa;
     private bool isText1 =true;
-	public NPC_Task npc_taskScript;
+    public NPC_Task npc_taskScript;
     public Quest_Event QE;
     public bool Fin_Dialog, dialog_on;
     public Animator AnimMiniGaem;

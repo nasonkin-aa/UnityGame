@@ -8,7 +8,7 @@ public class NPC_Spawn : MonoBehaviour
     private int rnd;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rnd = Random.Range(0, Npc.Length);
         Instantiate(Npc[rnd], transform.position, Quaternion.identity);

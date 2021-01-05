@@ -12,6 +12,8 @@ public class Clicker : MonoBehaviour
     [SerializeField] private TextMesh TimeLabel;
     public GameObject Circle;
     public GameObject ButtonExit;
+    public Vector3 FirstCircle = new Vector3(4f, 10f, 0);
+
 
     public bool TimerCheck = false;
 
@@ -54,7 +56,9 @@ public class Clicker : MonoBehaviour
         }
         else if(Score > 0)
         {
+
             TimerCheck = true;
+            
         }
        
 
@@ -68,6 +72,7 @@ public class Clicker : MonoBehaviour
             {
                 Score = 0;
                 TimeStart = 3f;
+                Circle.transform.localScale = FirstCircle;
             }
             else
             {

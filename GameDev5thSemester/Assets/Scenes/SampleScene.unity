@@ -2332,7 +2332,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4d4052b5ee8c9fc4ab13253c770d6381, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2341,7 +2341,7 @@ SpriteRenderer:
   m_Size: {x: 18.9, y: 14.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &960177158
@@ -2363,6 +2363,7 @@ MonoBehaviour:
   TimeLabel: {fileID: 1836623091}
   Circle: {fileID: 960177155}
   ButtonExit: {fileID: 587076522}
+  FirstCircle: {x: 4, y: 10, z: 0}
   TimerCheck: 0
 --- !u!58 &960177159
 CircleCollider2D:
@@ -4458,7 +4459,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836623089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -27}
+  m_LocalPosition: {x: 0, y: 0, z: -177.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1668542937}
@@ -4466,7 +4467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: -1}
+  m_AnchoredPosition: {x: -50.6, y: -1}
   m_SizeDelta: {x: 45.492996, y: 36.45704}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!102 &1836623091

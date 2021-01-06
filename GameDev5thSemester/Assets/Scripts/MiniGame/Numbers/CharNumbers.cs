@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class CharNumbers : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] Projectiles;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Instantiate(Projectiles[0], transform.position, Quaternion.identity);
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Instantiate(Projectiles[1], transform.position, Quaternion.identity);
+
+
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            Instantiate(Projectiles[2], transform.position, Quaternion.identity);
+
+
+        }
     }
+
 }

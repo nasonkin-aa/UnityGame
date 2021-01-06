@@ -10,6 +10,10 @@ TagManager:
   - Coin
   - Event
   - cntrl
+  - MGBFirst
+  - MGBSecond
+  - MGBThird
+  - MGBPlaeyr
   layers:
   - Default
   - TransparentFX

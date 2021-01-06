@@ -88,3 +88,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 8010003933500435980, guid: 6d0ea568bcfbc8449ad0268d5011be79, type: 3}
+  Parent: {fileID: 0}

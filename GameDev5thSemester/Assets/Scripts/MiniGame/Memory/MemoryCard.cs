@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MemoryCard : MonoBehaviour
 {
     [SerializeField] private GameObject CardBack;
@@ -10,9 +11,11 @@ public class MemoryCard : MonoBehaviour
         
         if (CardBack.activeSelf && controller.CanReveal)
         {
-
+            
             CardBack.SetActive(false);
             controller.CardRevealed(this);
+           
+
         }
     }
     public void Unreveal()

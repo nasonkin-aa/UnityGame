@@ -92,7 +92,7 @@ public class SceneController : MonoBehaviour
                 {
                     card = Instantiate(originalCard) as MemoryCard;
                     card.transform.SetParent(Parent.transform);
-                    card.transform.localScale = new Vector3(40, 40,40);
+                    card.transform.localScale = new Vector3(40,40,40);
                 }
 
                 int index = j * gridCols + i;

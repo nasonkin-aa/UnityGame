@@ -6,7 +6,7 @@ public class Spawn : MonoBehaviour
 {
     public GameObject item;
     private Transform player;
-    public GameObject Parent;
+    [SerializeField] public GameObject Parent;
     private GameObject Items;
 
     private void Start()
@@ -18,6 +18,7 @@ public class Spawn : MonoBehaviour
     {
         Vector3 playerPos = new Vector3(player.position.x + 5, player.position.y - 0,10);
         Items=Instantiate(item, playerPos, Quaternion.identity);
+        
         //Items.transform.SetParent(Parent.transform);
     }
 }

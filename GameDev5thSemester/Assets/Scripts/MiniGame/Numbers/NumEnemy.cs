@@ -14,7 +14,7 @@ public class NumEnemy : MonoBehaviour
      }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("MGBPlaer"))
+        if (other.CompareTag("MGBPlaeyr"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -23,10 +23,10 @@ public class NumEnemy : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
-        else
+        /*else
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        }*/
     }
 
 }

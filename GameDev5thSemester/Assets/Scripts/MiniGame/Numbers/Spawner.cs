@@ -13,12 +13,12 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        Enumis[0].transform.localScale = new Vector3(5, 5, 40);
-        Enumis[1].transform.localScale = new Vector3(5, 5, 40);
-        Enumis[2].transform.localScale = new Vector3(5, 5, 40);
+        /*Enumis[0].transform.localScale = new Vector3(40, 40, 40);
+        Enumis[1].transform.localScale = new Vector3(40, 40, 40);
+        Enumis[2].transform.localScale = new Vector3(40, 40, 40);
         Enumis[0].transform.SetParent(Parent.transform);
         Enumis[1].transform.SetParent(Parent.transform);
-        Enumis[2].transform.SetParent(Parent.transform);
+        Enumis[2].transform.SetParent(Parent.transform);*/
         if (TimeBetwenSpawn <= 0)
         {
             

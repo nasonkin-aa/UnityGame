@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class CharNumbers : MonoBehaviour
 {
+    public int ScoreNum;
     public GameObject[] Projectiles;
     public sbyte Num;
-  
+    [SerializeField] private TextMesh ScoreLabel;
+
     void Update()
     {
-       
+        ScoreLabel.text = "score" + ScoreNum;
+
         if (Num == 1)
         {
             Instantiate(Projectiles[0], transform.position, Quaternion.identity);

@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class NumEnemy : MonoBehaviour
 {
-     public float speed;
-     private void Update()
+    public CharNumbers charnumbers;
+    public float speed;
+
+    void Start()
+    {
+        charnumbers = GameObject.Find("MGBPlayer").GetComponent<CharNumbers>();
+
+        
+    }
+
+    private void Update()
      {
+        
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         
@@ -17,16 +27,19 @@ public class NumEnemy : MonoBehaviour
         if (other.CompareTag("MGBPlaeyr"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
         }
         if(other.tag == gameObject.tag)
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+            charnumbers.ScoreNum++;
         }
-        /*else
+        else if(other.tag != gameObject.tag && (other.tag == "MGBFirst" || other.tag == "MGBSecond" || other.tag == "MGBThird")) 
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }*/
+            Debug.Log("дщд");
+            
+        }
     }
 
 }

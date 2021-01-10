@@ -7,27 +7,28 @@ public class NumEnemy : MonoBehaviour
 {
     public CharNumbers charnumbers;
     public float speed;
+    public Teather teather;
 
     void Start()
     {
+        teather = GameObject.Find("MGBController").GetComponent<Teather>();
         charnumbers = GameObject.Find("MGBPlayer").GetComponent<CharNumbers>();
-
-        
+    
     }
 
-    private void Update()
+    void Update()
      {
         
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         
      }
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("MGBPlaeyr"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            
+            teather.flag=true;
+            Destroy(gameObject);
         }
         if(other.tag == gameObject.tag)
         {
@@ -37,8 +38,10 @@ public class NumEnemy : MonoBehaviour
         }
         else if(other.tag != gameObject.tag && (other.tag == "MGBFirst" || other.tag == "MGBSecond" || other.tag == "MGBThird")) 
         {
-            Debug.Log("дщд");
-            
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+
+            teather.flag = true;
         }
     }
 

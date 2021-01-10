@@ -23,7 +23,7 @@ public class Clicker : MonoBehaviour
         if (Score < MaxScore)
         {
             Score++;
-            Circle.transform.localScale += new Vector3(1f, 1.5f, 0);
+            Circle.transform.localScale += new Vector3(10f, 15f, 0);
             
         }
        

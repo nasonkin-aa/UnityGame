@@ -16,7 +16,7 @@ public class CharNumbers : MonoBehaviour
         if (Num == 1)
         {
             Instantiate(Projectiles[0], transform.position, Quaternion.identity);
-            Debug.Log("ok");
+           
             Num = 0;
 
         }

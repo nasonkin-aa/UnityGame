@@ -8,6 +8,8 @@ public class CharNumbers : MonoBehaviour
     public GameObject[] Projectiles;
     public sbyte Num;
     [SerializeField] private TextMesh ScoreLabel;
+    public GameObject ButtonEnd;
+    public Teather teather;
 
     void Update()
     {
@@ -31,6 +33,13 @@ public class CharNumbers : MonoBehaviour
             Instantiate(Projectiles[2], transform.position, Quaternion.identity);
             Num = 0;
 
+
+        }
+        if (ScoreNum == 3)
+        {
+            ButtonEnd.SetActive(true);
+            
+            
 
         }
     }

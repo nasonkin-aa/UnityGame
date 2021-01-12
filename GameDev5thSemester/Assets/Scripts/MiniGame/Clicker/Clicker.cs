@@ -12,9 +12,9 @@ public class Clicker : MonoBehaviour
     [SerializeField] private TextMesh TimeLabel;
     public GameObject Circle;
     public GameObject ButtonExit;
-    public Vector3 FirstCircle = new Vector3(4f, 10f, 0);
+    public Vector3 FirstCircle = new Vector3(100f, 100f, 0);
 
-
+    
     public bool TimerCheck = false;
 
     public void OnMouseDown()

@@ -29,6 +29,7 @@ public class NumEnemy : MonoBehaviour
         {
             teather.flag=true;
             Destroy(gameObject);
+            charnumbers.ScoreNum = 0;
         }
         if(other.tag == gameObject.tag)
         {
@@ -40,7 +41,7 @@ public class NumEnemy : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
-
+            charnumbers.ScoreNum = 0;
             teather.flag = true;
         }
     }

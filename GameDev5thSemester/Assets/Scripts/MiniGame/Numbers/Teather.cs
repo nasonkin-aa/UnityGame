@@ -6,7 +6,7 @@ public class Teather : MonoBehaviour
 {
     public NumSturtButton NSB;
     public bool flag;
-   
+    public GameObject RemoveNum;
     void Start()
     {
         
@@ -17,7 +17,7 @@ public class Teather : MonoBehaviour
     {
         if (flag == true)
         {
-
+            RemoveNum.SetActive(true);
             NSB.ButtonStart.SetActive(true);
             NSB.PressButton = false;
             flag = false;

@@ -6,11 +6,13 @@ public class NumSturtButton : MonoBehaviour
 {
     public bool PressButton = false;
     public GameObject ButtonStart;
+    public GameObject RemoveNum;
 
     public void OnMouseDown()
     {
         PressButton = true;
         ButtonStart.SetActive(false);
+        RemoveNum.SetActive(false);
 
 
     }

@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class RandomPatrol : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
+    Vector3 TargetPosition;
+    public float speed;
+
     void Start()
     {
+        TargetPosition = GetRandomPosition();
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if((Vector3)transform.position != TargetPosition)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, TargetPosition, speed * Time.deltaTime);
+        }
+        else
+        {
+            TargetPosition = GetRandomPosition();
+            
+        }
     }
+
+    Vector3 GetRandomPosition()
+    {
+        float randomX = Random.Range(minX, maxX);
+        float randomY = Random.Range(minY, maxY);
+
+        return new Vector3(randomX, randomY,0.5f);
+
+    }
+
 }

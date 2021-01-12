@@ -15,7 +15,6 @@ TagManager:
   - MGBThird
   - MGBPlaeyr
   - MGBStartButton
-  - MGBNumRemove
   layers:
   - Default
   - TransparentFX

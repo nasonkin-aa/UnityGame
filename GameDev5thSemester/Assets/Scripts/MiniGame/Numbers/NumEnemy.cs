@@ -8,13 +8,11 @@ public class NumEnemy : MonoBehaviour
     public CharNumbers charnumbers;
     public float speed;
     public Teather teather;
- 
 
     void Start()
     {
         teather = GameObject.Find("MGBController").GetComponent<Teather>();
         charnumbers = GameObject.Find("MGBPlayer").GetComponent<CharNumbers>();
-     
     
     }
 
@@ -31,8 +29,6 @@ public class NumEnemy : MonoBehaviour
         {
             teather.flag=true;
             Destroy(gameObject);
-            charnumbers.ScoreNum = 0;
-    
         }
         if(other.tag == gameObject.tag)
         {
@@ -44,8 +40,8 @@ public class NumEnemy : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
+
             teather.flag = true;
-            charnumbers.ScoreNum = 0;
         }
     }
 

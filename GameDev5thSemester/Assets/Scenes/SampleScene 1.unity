@@ -3057,7 +3057,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 332.66998, y: 46.59}
+  m_Size: {x: 457.9, y: 46.59}
   m_EdgeRadius: 0
 --- !u!114 &835023820
 MonoBehaviour:
@@ -3416,7 +3416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &953558898
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3539,7 +3539,7 @@ MonoBehaviour:
   TimeLabel: {fileID: 1836623091}
   Circle: {fileID: 960177155}
   ButtonExit: {fileID: 587076522}
-  FirstCircle: {x: 4, y: 10, z: 0}
+  FirstCircle: {x: 100, y: 100, z: 0}
   TimerCheck: 0
 --- !u!58 &960177159
 CircleCollider2D:
@@ -6168,7 +6168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1779268255
 RectTransform:
   m_ObjectHideFlags: 0

@@ -23,7 +23,8 @@ public class Move : MonoBehaviour
 
     public void LeftButtonDown()
     {
-        speedX = -horizontalSpeed;      
+        speedX = -horizontalSpeed;
+        
     }
 
     public void RightButtonDown()

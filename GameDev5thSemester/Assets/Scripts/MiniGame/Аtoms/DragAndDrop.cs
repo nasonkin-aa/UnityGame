@@ -7,6 +7,11 @@ public class DragAndDrop : MonoBehaviour
 {
     bool MouseDown = false;
     public ZoneMouse zoneMouse;
+
+    void Start()
+    {
+        zoneMouse = GameObject.Find("Zone").GetComponent<ZoneMouse>();
+    }
     void OnMouseDown()
     {
         MouseDown = true;
@@ -25,7 +30,7 @@ public class DragAndDrop : MonoBehaviour
         Cursor = Camera.main.ScreenToWorldPoint(Cursor);
         Cursor.z = 0.5f;
 
-        Debug.Log(zoneMouse.Zone);
+        
         if (zoneMouse.Zone)
         {
             if (MouseDown)

@@ -12,28 +12,48 @@ public class RandomPatrol : MonoBehaviour
     Vector3 TargetPosition;
     public float speed;
     public StartButtonAtoms startButtonAtoms;
+    public TeatherAtoms teatherAtoms;
+    public GameObject[] Atoms;
+    public TimerAtoms timerAtoms;
+    
 
 
-    void Start()
+    void Awake()
     {
         TargetPosition = GetRandomPosition();
-        
+        //startButtonAtoms = GameObject.Find("ButtonStart").GetComponent<StartButtonAtoms>();
+        teatherAtoms = GameObject.Find("AtomController").GetComponent<TeatherAtoms>();
+        timerAtoms = GameObject.Find("Score").GetComponent<TimerAtoms>();
     }
     void FixedUpdate()
     {
-        if(startButtonAtoms.PressButton == true)
+         if ((Vector3)transform.position != TargetPosition)
+         {
+             transform.position = Vector3.MoveTowards(transform.position, TargetPosition, speed * Time.deltaTime);
+         }
+         else
+         {
+             TargetPosition = GetRandomPosition();
+         }
+        if (timerAtoms.TimeStart > 5f)
         {
-            if ((Vector3)transform.position != TargetPosition)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, TargetPosition, speed * Time.deltaTime);
-            }
-        else
-            {
-                TargetPosition = GetRandomPosition();
-            }
+            
+            speed = 1f;
+            
 
         }
-        
+        if (timerAtoms.TimeStart > 10f )
+        {
+            speed = 1.3f;
+           
+        }
+        if (timerAtoms.TimeStart > 15f)
+        {
+            speed = 1.7f;
+        }
+
+
+
     }
 
     Vector3 GetRandomPosition()
@@ -44,12 +64,22 @@ public class RandomPatrol : MonoBehaviour
         return new Vector3(randomX, randomY,0.2f);
 
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    void DestroyAtoms()
+    {
+        Atoms = GameObject.FindGameObjectsWithTag("Atom");
+        for (int i = 0; i < Atoms.Length; i++)
+        {
+            Destroy(Atoms[i]);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Atom")
         {
-            startButtonAtoms.PressButton = false;
-            startButtonAtoms.StartButton.SetActive(true);
+            
+            //startButtonAtoms.PressButton = false;
+            teatherAtoms.flag = true;
+            DestroyAtoms();
 
         }
 

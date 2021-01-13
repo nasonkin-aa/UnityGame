@@ -20,9 +20,23 @@ public class NumEnemy : MonoBehaviour
      {
         
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+        if (charnumbers.ScoreNum >= 3)
+        {
+            Debug.Log("rab");
+            speed = 7;
+        }
+        if (charnumbers.ScoreNum >= 6)
+        {
+            Debug.Log("rab");
+            speed = 7;
+        }
+        if (charnumbers.ScoreNum >= 9)
+        {
+            Debug.Log("rab");
+            speed = 9;
+        }
 
-        
-     }
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("MGBPlaeyr"))
@@ -44,6 +58,7 @@ public class NumEnemy : MonoBehaviour
             charnumbers.ScoreNum = 0;
             teather.flag = true;
         }
+       
     }
 
 }

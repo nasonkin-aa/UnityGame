@@ -476,6 +476,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Atom
       objectReference: {fileID: 0}
+    - target: {fileID: 8041509170014358538, guid: 9436261eaed6d5b4f8c20f61fa0e3e61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9436261eaed6d5b4f8c20f61fa0e3e61, type: 3}
 --- !u!1 &166692233 stripped
@@ -508,6 +513,9 @@ MonoBehaviour:
   maxY: 10
   speed: 1
   startButtonAtoms: {fileID: 1548499140}
+  teatherAtoms: {fileID: 0}
+  Atoms: []
+  timerAtoms: {fileID: 0}
 --- !u!50 &166692236
 Rigidbody2D:
   serializedVersion: 4
@@ -834,6 +842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Atom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041509170014358538, guid: 9436261eaed6d5b4f8c20f61fa0e3e61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9436261eaed6d5b4f8c20f61fa0e3e61, type: 3}
@@ -1571,7 +1584,6 @@ MonoBehaviour:
   PressButton: 0
   ButtonStart: {fileID: 326084011}
   RemoveNum: {fileID: 835023817}
-  RemoveNum: {fileID: 0}
 --- !u!1 &354972151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,6 +2090,9 @@ MonoBehaviour:
   maxY: 10
   speed: 1
   startButtonAtoms: {fileID: 1548499140}
+  teatherAtoms: {fileID: 0}
+  Atoms: []
+  timerAtoms: {fileID: 0}
 --- !u!50 &396285102
 Rigidbody2D:
   serializedVersion: 4
@@ -3233,7 +3248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &711356046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4839,6 +4854,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Atom
       objectReference: {fileID: 0}
+    - target: {fileID: 8041509170014358538, guid: 9436261eaed6d5b4f8c20f61fa0e3e61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 9436261eaed6d5b4f8c20f61fa0e3e61, type: 3}
@@ -5585,9 +5605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547876c742233bd4fb9fa5ca87385be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flag: 0
-  Zone: {fileID: 1717040348}
   STB: {fileID: 1548499140}
+  flag: 0
 --- !u!1 &1389560678
 GameObject:
   m_ObjectHideFlags: 0
@@ -6595,8 +6614,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548499137}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -13, z: -98}
-  m_LocalScale: {x: 35.999996, y: 35.999996, z: 35.999996}
+  m_LocalPosition: {x: 1, y: -13, z: -356}
+  m_LocalScale: {x: 36, y: 36, z: 36}
   m_Children: []
   m_Father: {fileID: 128477162}
   m_RootOrder: 4
@@ -6666,6 +6685,7 @@ MonoBehaviour:
   PressButton: 0
   StartButton: {fileID: 1548499137}
   Zone: {fileID: 1717040348}
+  Atom: {fileID: 8041509170014358538, guid: 9436261eaed6d5b4f8c20f61fa0e3e61, type: 3}
 --- !u!61 &1548499141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6888,6 +6908,9 @@ MonoBehaviour:
   maxY: 10
   speed: 1
   startButtonAtoms: {fileID: 1548499140}
+  teatherAtoms: {fileID: 0}
+  Atoms: []
+  timerAtoms: {fileID: 0}
 --- !u!50 &1562420775
 Rigidbody2D:
   serializedVersion: 4
@@ -7517,6 +7540,9 @@ MonoBehaviour:
   maxY: 10
   speed: 1
   startButtonAtoms: {fileID: 1548499140}
+  teatherAtoms: {fileID: 0}
+  Atoms: []
+  timerAtoms: {fileID: 0}
 --- !u!50 &1683002404
 Rigidbody2D:
   serializedVersion: 4
@@ -7987,6 +8013,7 @@ GameObject:
   - component: {fileID: 1718743041}
   - component: {fileID: 1718743043}
   - component: {fileID: 1718743042}
+  - component: {fileID: 1718743044}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -8074,6 +8101,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1718743044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718743040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089d31b1eb1ff804787ab41d15c7ff07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeLabel: {fileID: 1718743042}
+  STB: {fileID: 1548499140}
+  TimeStart: 0
 --- !u!1 &1748009029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8041509170014358538, guid: 9436261eaed6d5b4f8c20f61fa0e3e61,
@@ -8104,6 +8146,9 @@ MonoBehaviour:
   maxY: 10
   speed: 1
   startButtonAtoms: {fileID: 1548499140}
+  teatherAtoms: {fileID: 0}
+  Atoms: []
+  timerAtoms: {fileID: 0}
 --- !u!50 &1748009032
 Rigidbody2D:
   serializedVersion: 4
@@ -8232,6 +8277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Atom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041509170014358538, guid: 9436261eaed6d5b4f8c20f61fa0e3e61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -9526,6 +9576,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Atom
       objectReference: {fileID: 0}
+    - target: {fileID: 8041509170014358538, guid: 9436261eaed6d5b4f8c20f61fa0e3e61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9436261eaed6d5b4f8c20f61fa0e3e61, type: 3}
 --- !u!1 &2010540238
@@ -9718,6 +9773,9 @@ MonoBehaviour:
   maxY: 10
   speed: 1
   startButtonAtoms: {fileID: 1548499140}
+  teatherAtoms: {fileID: 0}
+  Atoms: []
+  timerAtoms: {fileID: 0}
 --- !u!50 &2080474321
 Rigidbody2D:
   serializedVersion: 4
@@ -9846,6 +9904,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Atom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041509170014358538, guid: 9436261eaed6d5b4f8c20f61fa0e3e61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9436261eaed6d5b4f8c20f61fa0e3e61, type: 3}

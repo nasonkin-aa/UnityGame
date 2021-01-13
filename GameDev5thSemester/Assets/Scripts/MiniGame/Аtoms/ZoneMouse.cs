@@ -8,18 +8,14 @@ public class ZoneMouse : MonoBehaviour
     void OnMouseEnter()
     {
         Zone = true;
-        Debug.Log(Zone);
+        
     }
     void OnMouseExit()
     {
        
         Zone = false;
-        Debug.Log(Zone);
-    }
-    void OnMouseDown()
-    {
-        Debug.Log(Zone);
 
     }
+
     
  }

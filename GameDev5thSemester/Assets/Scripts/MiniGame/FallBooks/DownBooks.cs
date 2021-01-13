@@ -10,7 +10,7 @@ public class DownBooks : MonoBehaviour
     
     void Update()
     {
-        if (transform.position.y < -7f)
+        /*if (transform.position.y < -7f)
         {
             Destroy(gameObject);
             k++;
@@ -18,12 +18,12 @@ public class DownBooks : MonoBehaviour
             {
                 CleanMap();
             }
-        }
+        }*/
         transform.position -= new Vector3(0, fallSpeed * Time.deltaTime, 0);
     }
 
-    void CleanMap()
+    /*void CleanMap()
     {
         gameObject.GetComponent<Player>().GameWin();
-    }
+    }*/
 }

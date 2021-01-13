@@ -1,27 +1,41 @@
 ﻿using UnityEngine;
 
+
+
 public class Player : MonoBehaviour
 {
     public static bool lose = false;
-    public GameObject restart;
-    public GameObject end;
+    public GameObject[] X;
+    //public GameObject restart;
+    //public GameObject end;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Book")
+        if (other.tag == "Book")
         {
-            print("hhhh");
+            Debug.Log("hhhh");
             lose = true;
-            restart.SetActive(true);
-            end.SetActive(true);
+            Destroy();
+            //restart.SetActive(true);
+            //end.SetActive(true);
         }
+    }
+
+    void Destroy()
+    {
+        X = GameObject.FindGameObjectsWithTag("Book");
+        for (int i = 0; i < X.Length; i++)
+        {
+            Destroy(X[i]);
+        }
+        
     }
 
     public void Restart()
     {
         lose = false;
-        restart.SetActive(false);
-        end.SetActive(false);
+        //restart.SetActive(false);
+        //end.SetActive(false);
         FindObjectOfType<SpawnBooks>().StartSpawn();
     }
 

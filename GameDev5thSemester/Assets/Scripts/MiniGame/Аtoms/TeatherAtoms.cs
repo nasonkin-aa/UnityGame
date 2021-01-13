@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class TeatherAtoms : MonoBehaviour
 {
-    public bool flag;
-    public GameObject Zone;
+    
     public StartButtonAtoms STB;
+    
+    public bool flag;
+ 
 
-    // Update is called once per frame
     void Update()
     {
-        if(flag == true)
+        if (flag == true)
         {
-            
-            //STB.StartButton
+            STB.StartButton.SetActive(true);
             flag = false;
-
         }
-        
+
     }
 }

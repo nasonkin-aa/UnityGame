@@ -1571,7 +1571,6 @@ MonoBehaviour:
   PressButton: 0
   ButtonStart: {fileID: 326084011}
   RemoveNum: {fileID: 835023817}
-  RemoveNum: {fileID: 0}
 --- !u!1 &354972151
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +3232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &711356046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6595,7 +6594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548499137}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -13, z: -98}
+  m_LocalPosition: {x: 1, y: -13, z: -356}
   m_LocalScale: {x: 35.999996, y: 35.999996, z: 35.999996}
   m_Children: []
   m_Father: {fileID: 128477162}
@@ -6666,6 +6665,8 @@ MonoBehaviour:
   PressButton: 0
   StartButton: {fileID: 1548499137}
   Zone: {fileID: 1717040348}
+  Atom: {fileID: 8041509170014358538, guid: 9436261eaed6d5b4f8c20f61fa0e3e61, type: 3}
+  Parent: {fileID: 128477161}
 --- !u!61 &1548499141
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -23,14 +23,18 @@ public class Move : MonoBehaviour
 
     public void LeftButtonDown()
     {
-        if(PosX > -11)
-        {
-            speedX = -horizontalSpeed;
-        }
-        else
-        {
-            speedX = 0;
-        }
+        //while (true)
+        //{
+            if (PosX > -11)
+            {
+                speedX = -horizontalSpeed;
+            }
+            else
+            {
+                speedX = 0;
+            }
+       // }
+        
     }
 
     public void RightButtonDown()

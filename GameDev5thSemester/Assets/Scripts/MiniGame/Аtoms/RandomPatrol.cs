@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RandomPatrol : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class RandomPatrol : MonoBehaviour
         TargetPosition = GetRandomPosition();
         
     }
-    void Update()
+    void FixedUpdate()
     {
         if((Vector3)transform.position != TargetPosition)
         {
@@ -37,5 +38,12 @@ public class RandomPatrol : MonoBehaviour
         return new Vector3(randomX, randomY,0.5f);
 
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Atom")
+        {
+            Debug.Log("boom");
+        }
 
+    }
 }

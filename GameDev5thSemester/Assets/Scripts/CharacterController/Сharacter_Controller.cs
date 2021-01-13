@@ -11,6 +11,7 @@ public class Сharacter_Controller : MonoBehaviour
     private bool FacingRight = true;
     public Joystick joystick;
 
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

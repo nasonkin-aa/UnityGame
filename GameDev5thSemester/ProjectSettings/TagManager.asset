@@ -15,6 +15,7 @@ TagManager:
   - MGBThird
   - MGBPlaeyr
   - MGBStartButton
+  - Atom
   layers:
   - Default
   - TransparentFX

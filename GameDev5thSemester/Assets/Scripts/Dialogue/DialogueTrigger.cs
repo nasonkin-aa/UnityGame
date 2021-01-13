@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public DialogueAnimator da;
+    public static InstantiateDialog ID;
     public bool pressed;
+    public GameObject controller;
+
+    private void Start()
+    {
+        controller = GameObject.Find("Controller");
+    }
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(da.d);
+
+        ID.ShowDialogue = true;
     }
+
 }

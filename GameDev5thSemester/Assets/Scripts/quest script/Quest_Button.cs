@@ -8,12 +8,10 @@ public class Quest_Button : MonoBehaviour
     public Quest_Event QE;
     public Animator AnimMiniGaem;
     public NPC_Task npc_taskScript;
-    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.Find("Player");
         npc_taskScript = GameObject.FindGameObjectWithTag("Game3").GetComponent<NPC_Task>();
     }
 
@@ -27,6 +25,6 @@ public class Quest_Button : MonoBehaviour
         QE.end_Quest1 = true;
         AnimMiniGaem.SetTrigger("IsTriggered");
         npc_taskScript.EndDialog = false;
-        Player.GetComponent<Score>().scre += 10;
+        Score.scre += 10;
     }
 }

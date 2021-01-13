@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Score : MonoBehaviour
+public class Score :MonoBehaviour
 {
 
-    public int scre;
-    GUIStyle razmer;
+    public static int scre;
+    public static GUIStyle razmer;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class Score : MonoBehaviour
         GUI.Label(new Rect(1030, 40, 100, 100), "Score: " + scre, razmer);
     }
 
-    void Update()
+    static void Update()
     {
         
     }

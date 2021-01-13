@@ -23,30 +23,18 @@ public class Move : MonoBehaviour
 
     public void LeftButtonDown()
     {
-        //while (true)
-        //{
-            if (PosX > -11)
-            {
-                speedX = -horizontalSpeed;
-            }
-            else
-            {
-                speedX = 0;
-            }
-       // }
+        speedX = -horizontalSpeed;
         
     }
 
     public void RightButtonDown()
     {
-        if(PosX < 8)
-        {
-            speedX = horizontalSpeed;
-        }
-        else
-        {
-            speedX = 0;
-        }
+        speedX = horizontalSpeed;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        speedX = 0;
     }
 
     public void Stop()

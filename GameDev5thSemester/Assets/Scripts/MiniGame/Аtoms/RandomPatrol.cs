@@ -14,6 +14,7 @@ public class RandomPatrol : MonoBehaviour
     public StartButtonAtoms startButtonAtoms;
     public TeatherAtoms teatherAtoms;
     public GameObject[] Atoms;
+    public TimerAtoms timerAtoms;
     
 
 
@@ -22,18 +23,20 @@ public class RandomPatrol : MonoBehaviour
         TargetPosition = GetRandomPosition();
         //startButtonAtoms = GameObject.Find("ButtonStart").GetComponent<StartButtonAtoms>();
         teatherAtoms = GameObject.Find("AtomController").GetComponent<TeatherAtoms>();
+        timerAtoms = GameObject.Find("Score").GetComponent<TimerAtoms>();
     }
     void FixedUpdate()
     {
-            if ((Vector3)transform.position != TargetPosition)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, TargetPosition, speed * Time.deltaTime);
-            }
-            else
-            {
-                TargetPosition = GetRandomPosition();
-            }
-
+         if ((Vector3)transform.position != TargetPosition)
+         {
+             transform.position = Vector3.MoveTowards(transform.position, TargetPosition, speed * Time.deltaTime);
+         }
+         else
+         {
+             TargetPosition = GetRandomPosition();
+         }
+         
+            
     }
 
     Vector3 GetRandomPosition()
@@ -56,7 +59,7 @@ public class RandomPatrol : MonoBehaviour
     {
         if (other.tag == "Atom")
         {
-            Debug.Log("BAH");
+            
             //startButtonAtoms.PressButton = false;
             teatherAtoms.flag = true;
             DestroyAtoms();

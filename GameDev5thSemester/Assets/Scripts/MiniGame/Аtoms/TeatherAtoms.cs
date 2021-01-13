@@ -15,8 +15,11 @@ public class TeatherAtoms : MonoBehaviour
         if (flag == true)
         {
             STB.StartButton.SetActive(true);
+            STB.PressButton = false;
             flag = false;
         }
 
     }
+
+
 }

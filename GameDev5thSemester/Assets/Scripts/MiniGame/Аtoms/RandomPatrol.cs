@@ -35,8 +35,25 @@ public class RandomPatrol : MonoBehaviour
          {
              TargetPosition = GetRandomPosition();
          }
-         
+        if (timerAtoms.TimeStart > 5f)
+        {
             
+            speed = 1f;
+            
+
+        }
+        if (timerAtoms.TimeStart > 10f )
+        {
+            speed = 1.3f;
+           
+        }
+        if (timerAtoms.TimeStart > 15f)
+        {
+            speed = 1.7f;
+        }
+
+
+
     }
 
     Vector3 GetRandomPosition()

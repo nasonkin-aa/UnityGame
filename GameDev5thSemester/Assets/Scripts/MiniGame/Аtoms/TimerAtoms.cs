@@ -7,6 +7,7 @@ public class TimerAtoms : MonoBehaviour
     [SerializeField] private TextMesh TimeLabel;
 
     public StartButtonAtoms STB;
+    public GameObject ButtonExit;
 
     public float TimeStart = 0f;
 
@@ -28,7 +29,11 @@ public class TimerAtoms : MonoBehaviour
         {
             TimeStart = 0f;
         }
-   
+        
+        if(TimeStart > 18)
+        {
+            ButtonExit.SetActive(true);
+        }
         
     }
 }

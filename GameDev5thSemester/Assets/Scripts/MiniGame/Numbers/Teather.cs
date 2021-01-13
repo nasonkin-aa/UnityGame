@@ -7,12 +7,7 @@ public class Teather : MonoBehaviour
     public NumSturtButton NSB;
     public bool flag;
     public GameObject RemoveNum;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (flag == true)

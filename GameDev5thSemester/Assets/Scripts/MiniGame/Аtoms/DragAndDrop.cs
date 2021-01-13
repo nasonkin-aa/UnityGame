@@ -18,14 +18,14 @@ public class DragAndDrop : MonoBehaviour
         MouseDown = false;
         
     }
-    void Update()
+    void FixedUpdate()
     {
         Vector3 Cursor = Input.mousePosition;
 
         Cursor = Camera.main.ScreenToWorldPoint(Cursor);
         Cursor.z = 0.5f;
 
-        //Debug.Log(zoneMouse.Zone);
+        Debug.Log(zoneMouse.Zone);
         if (zoneMouse.Zone)
         {
             if (MouseDown)

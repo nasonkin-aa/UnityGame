@@ -94,3 +94,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627b9b9320024b244a8e0c3aac754a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneMouse: {fileID: 0}

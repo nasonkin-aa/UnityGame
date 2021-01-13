@@ -16,4 +16,10 @@ public class ZoneMouse : MonoBehaviour
         Zone = false;
         Debug.Log(Zone);
     }
-}
+    void OnMouseDown()
+    {
+        Debug.Log(Zone);
+
+    }
+    
+ }

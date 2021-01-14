@@ -5,14 +5,13 @@ using UnityEngine;
 public class Quest_Button : MonoBehaviour
 {
 
-    public Quest_Event QE;
     public Animator AnimMiniGaem;
-    public NPC_Task npc_taskScript;
+    public GameObject controller;
 
     // Start is called before the first frame update
     void Start()
     {
-        npc_taskScript = GameObject.FindGameObjectWithTag("Game3").GetComponent<NPC_Task>();
+        //controller = GameObject.Find("Controller");
     }
 
     // Update is called once per frame
@@ -22,9 +21,11 @@ public class Quest_Button : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        QE.end_Quest1 = true;
+        if (PlayerPrefs.GetInt ("questClicker") == 1)
+        {
+            PlayerPrefs.SetInt ("questClicker", 2);
+        }
+        controller.SetActive(true);
         AnimMiniGaem.SetTrigger("IsTriggered");
-        npc_taskScript.EndDialog = false;
-        Score.scre += 10;
     }
 }

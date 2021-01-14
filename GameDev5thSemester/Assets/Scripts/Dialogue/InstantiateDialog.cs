@@ -33,7 +33,9 @@ public class InstantiateDialog : MonoBehaviour
         for (int i = 0; i < dialog.nodes[currentNode].answers.Length; i++)
         {
             if (dialog.nodes[currentNode].answers[i].QuestName == null || dialog.nodes[currentNode].answers[i].NeedQuestValue == PlayerPrefs.GetInt(dialog.nodes[currentNode].answers[i].QuestName))
+            {
                 answers.Add(dialog.nodes[currentNode].answers[i]);
+            }
         }
     }
 

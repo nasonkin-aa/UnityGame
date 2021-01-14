@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Сharacter_Controller : MonoBehaviour
+public class Character_Controller : MonoBehaviour
 {
     public float Speed;
     private float MoveImputHorizontal;

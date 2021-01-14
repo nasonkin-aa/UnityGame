@@ -19,7 +19,7 @@ public class DialogueAnimator : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             startAnim.SetBool("startOpen", true);
-            DT.da = gameObject.GetComponent<DialogueAnimator>();
+            //DT. = gameObject.GetComponent<DialogueAnimator>();
         }
             
     }

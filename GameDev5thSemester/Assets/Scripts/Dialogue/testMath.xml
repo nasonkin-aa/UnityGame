@@ -1,0 +1,60 @@
+<dialogue>
+    <node>
+        <npctext>Здравствуй.</npctext>
+        <answers>
+            <answer tonode = "1" needquestvalue = "0"><text>Что мне нужно сделать, чтобы сдать зачёт?</text><questname>testMath</questname></answer>
+            <answer tonode = "0"><text>Я должен идти.</text><dialend>true</dialend></answer>
+		</answers>
+    </node>
+    <node>
+        <npctext>Тебе нужно сдать тест по математике.</npctext>
+        <answers>
+            <answer tonode = "4" questvalue = "1"><text>Ну это легкотня...</text><questname>testMath</questname></answer>
+            <answer tonode = "0"><text>Думаю, попозже.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Великолепно! Ты получил зачёт.</npctext>
+        <answers>
+            <answer tonode = "0" needquestvalue = "2" questvalue = "3" rewardpoints = "20"><text>Ура!</text><dialend>true</dialend><questname>testMath</questname></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Ты ошибся! Можешь попробовать ещё раз.</npctext>
+        <answers>
+            <answer tonode = "4" ><text>У меня получится!</text></answer>
+			<answer tonode = "7" needquestvalue = "1"><text>Может потом.</text><dialend>true</dialend><questname>testMath</questname></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Итак! Первый вопрос: Сколько будет 8 в квадрате?</npctext>
+        <answers>
+			<answer tonode = "3" ><text>16!</text></answer>
+            <answer tonode = "5" ><text>64!</text></answer>
+			<answer tonode = "3" ><text>32!</text></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Правильно! Второй вопрос: Синус 30 градусов?</npctext>
+        <answers>
+			<answer tonode = "6" ><text>1/2!</text></answer>
+            <answer tonode = "3" ><text>П/2!</text></answer>
+			<answer tonode = "3" ><text>0!</text></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Снова верно! Последний вопрос: Косинус 90 градусов?</npctext>
+        <answers>
+			<answer tonode = "3" ><text>П/4!</text></answer>
+            <answer tonode = "2" questvalue = "2" needquestvalue = "1"><text>0!</text><questname>testMath</questname></answer>
+			<answer tonode = "3" ><text>1!</text></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Здравствуй. Готов пересдать тест?</npctext>
+        <answers>
+            <answer tonode = "4" needquestvalue = "1"><text>Я во всеоружии!</text><questname>testMath</questname></answer>
+            <answer tonode = "7"><text>Пока нет.</text><dialend>true</dialend></answer>
+		</answers>
+    </node>
+</dialogue>

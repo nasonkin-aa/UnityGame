@@ -1,0 +1,30 @@
+<dialogue>
+    <node>
+        <npctext>Здравствуй.</npctext>
+        <answers>
+            <answer tonode = "1" needquestvalue = "0"><text>Что мне нужно сделать, чтобы сдать зачёт?</text><questname>questClicker</questname></answer>
+            <answer tonode = "0"><text>Я должен идти.</text><dialend>true</dialend></answer>
+			<answer tonode = "3" needquestvalue = "2"><text>Я справился!</text><questname>questClicker</questname></answer>
+			<answer tonode = "2" needquestvalue = "1"><text>Напомните моё задание, пожалуйста.</text><questname>questClicker</questname></answer>
+		</answers>
+    </node>
+    <node>
+        <npctext>Ах, это ты, должник! Пройди кликер на компьютере.</npctext>
+        <answers>
+            <answer tonode = "0" questvalue = "1"><text>Мигом управлюсь.</text><dialend>true</dialend><questname>questClicker</questname></answer>
+            <answer tonode = "0"><text>Думаю, попозже.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Тебе необходимо пройти кликер используя компьютер.</npctext>
+        <answers>
+            <answer tonode = "0"><text>Точно! Скоро сделаю.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Ого, молодец! Ты получил зачёт.</npctext>
+        <answers>
+            <answer tonode = "0" needquestvalue = "2" questvalue = "3" rewardpoints = "40"><text>Ура!</text><dialend>true</dialend><questname>questClicker</questname></answer>
+        </answers>
+    </node>
+</dialogue>

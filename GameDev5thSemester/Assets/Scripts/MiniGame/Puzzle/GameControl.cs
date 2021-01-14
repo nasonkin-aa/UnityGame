@@ -1,16 +1,17 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameControl : MonoBehaviour
 {
     [SerializeField]
-    private Transform[] pictures;
+    private Transform[] easy;
 
     [SerializeField]
     private GameObject done;
 
     public static bool youWin;
+    public GameObject Zone;
 
 
     void Start()
@@ -36,4 +37,10 @@ public class GameControl : MonoBehaviour
             done.SetActive(true);
         }
     }
-}*/
+
+    public void OnMouseDown()
+    {
+
+        Zone.SetActive(false);
+    }
+}

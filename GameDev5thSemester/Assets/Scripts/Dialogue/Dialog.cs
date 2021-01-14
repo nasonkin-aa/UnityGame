@@ -48,6 +48,6 @@ public class Answer
     public string QuestName;
 
 
-    [XmlAttribute("rewardgold")]
+    [XmlAttribute("rewardpoints")]
     public int RewardPoints;
 }

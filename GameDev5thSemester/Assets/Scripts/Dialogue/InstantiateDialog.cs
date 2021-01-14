@@ -33,9 +33,7 @@ public class InstantiateDialog : MonoBehaviour
         for (int i = 0; i < dialog.nodes[currentNode].answers.Length; i++)
         {
             if (dialog.nodes[currentNode].answers[i].QuestName == null || dialog.nodes[currentNode].answers[i].NeedQuestValue == PlayerPrefs.GetInt(dialog.nodes[currentNode].answers[i].QuestName))
-            {
                 answers.Add(dialog.nodes[currentNode].answers[i]);
-            }
         }
     }
 
@@ -46,7 +44,7 @@ public class InstantiateDialog : MonoBehaviour
         {
             controller.SetActive(false);
             GUI.Box(new Rect(Screen.width / 2 - 640, Screen.height - 600, 1280, 690), "", skin.box);
-            GUI.Label(new Rect(Screen.width / 2 - 560, Screen.height - 450, 1280, 90), dialog.nodes[currentNode].NpcText);
+            GUI.Label(new Rect(Screen.width / 2 - 560, Screen.height - 450, 1260, 120), dialog.nodes[currentNode].NpcText);
             for (int i = 0; i < answers.Count; i++)
             {
                 if (GUI.Button(new Rect(Screen.width / 2 - 550, Screen.height - 250 + 60 * i, 1000, 70), answers[i].text, skin.label))

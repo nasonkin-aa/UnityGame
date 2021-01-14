@@ -16,7 +16,7 @@
 	<node>
         <npctext>Великолепно! Ты получил зачёт.</npctext>
         <answers>
-            <answer tonode = "0" needquestvalue = "2" questvalue = "3"><text>Ура!</text><dialend>true</dialend><questname>testMath</questname></answer>
+            <answer tonode = "0" needquestvalue = "2" questvalue = "3" rewardpoints = "20"><text>Ура!</text><dialend>true</dialend><questname>testMath</questname></answer>
         </answers>
     </node>
 	<node>

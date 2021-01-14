@@ -1,0 +1,60 @@
+<dialogue>
+    <node>
+        <npctext>Здравствуй.</npctext>
+        <answers>
+            <answer tonode = "1" needquestvalue = "0"><text>Что мне нужно сделать, чтобы сдать зачёт?</text><questname>testPhysics</questname></answer>
+            <answer tonode = "0"><text>Я должен идти.</text><dialend>true</dialend></answer>
+		</answers>
+    </node>
+    <node>
+        <npctext>Тебе нужно сдать тест по Физике.</npctext>
+        <answers>
+            <answer tonode = "4" questvalue = "1"><text>Я постараюсь.</text><questname>testPhysics</questname></answer>
+            <answer tonode = "0"><text>Думаю, попозже.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Ты справился! Держи свой зачёт.</npctext>
+        <answers>
+            <answer tonode = "0" needquestvalue = "2" questvalue = "3" rewardpoints = "20"><text>Я сделал это!</text><dialend>true</dialend><questname>testPhysics</questname></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Ты ошибся! Можешь попробовать ещё раз.</npctext>
+        <answers>
+            <answer tonode = "4" ><text>У меня получится!</text></answer>
+			<answer tonode = "7" needquestvalue = "1"><text>Может потом.</text><dialend>true</dialend><questname>testPhysics</questname></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Итак! Первый вопрос: Самая знаменитая формула           Эйнштейна?</npctext>
+        <answers>
+			<answer tonode = "3" ><text>F = mg</text></answer>
+            <answer tonode = "3" ><text>S = Vt</text></answer>
+			<answer tonode = "5" ><text>E = mc^2</text></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Правильно! Второй вопрос: Каково ускорение свободного падения на Земле?</npctext>
+        <answers>
+			<answer tonode = "3" ><text>10 м/с</text></answer>
+            <answer tonode = "3" ><text>10 м/с^2</text></answer>
+			<answer tonode = "6" ><text>9,8 м/с^2</text></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Снова верно! Последний вопрос: Кто открыл закон         всемирного тяготения?</npctext>
+        <answers>
+			<answer tonode = "2" questvalue = "2" needquestvalue = "1"><text>Исаак Ньютон</text><questname>testPhysics</questname></answer>
+            <answer tonode = "3" ><text>Альберт Эйнштейн</text></answer>
+			<answer tonode = "3" ><text>Никола Тесла</text></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Здравствуй. Готов пересдать тест?</npctext>
+        <answers>
+            <answer tonode = "4" needquestvalue = "1"><text>В этот раз смогу!</text><questname>testPhysics</questname></answer>
+            <answer tonode = "7"><text>Пока нет.</text><dialend>true</dialend></answer>
+		</answers>
+    </node>
+</dialogue>

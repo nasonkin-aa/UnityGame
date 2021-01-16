@@ -14,8 +14,8 @@ public class SpawnBooks : MonoBehaviour
     {
         while (!Player.lose)
         {
-            Instantiate(book, new Vector3 (Random.Range(-12f, 9.5f), 7f, 10f), Quaternion.identity);
-            yield return new WaitForSeconds(0.1f);
+            Instantiate(book, new Vector3 (Random.Range(-16f, 10f), 7f, 10f), Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }

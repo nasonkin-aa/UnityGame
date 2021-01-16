@@ -10,15 +10,16 @@ public class DownBooks : MonoBehaviour
     
     void Update()
     {
-        /*if (transform.position.y < -7f)
+        if (transform.position.y < -7f)
         {
             Destroy(gameObject);
             k++;
             if (k == 1)
             {
-                CleanMap();
+                FindObjectOfType<Player>().GameWin();
+                FindObjectOfType<Player>().Destroy();
             }
-        }*/
+        }
         transform.position -= new Vector3(0, fallSpeed * Time.deltaTime, 0);
     }
 

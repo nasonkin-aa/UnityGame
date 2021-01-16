@@ -13,15 +13,15 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        timer.text = timeStart.ToString();
+        timer.text = timeStart.ToString(); //Конвертируем timeStart в стринг
     }
 
     void Update()
     {
         if (timeStart > 0)
         {
-            timeStart -= Time.deltaTime;
-            timer.text = Mathf.Round(timeStart).ToString();
+            timeStart -= Time.deltaTime; //время на таймере уменьшается апдейт срабатывает каждый кадр, дельтатайм время между кадрами
+            timer.text = Mathf.Round(timeStart).ToString();//добавляем округление
         }
         else
         {

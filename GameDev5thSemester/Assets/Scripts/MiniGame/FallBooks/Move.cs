@@ -14,12 +14,6 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    
-    void Update()
-    {
-        //PosX = transform.position.x;
-        //print(transform.position.x);
-    }
 
     public void LeftButtonDown()
     {
@@ -48,8 +42,5 @@ public class Move : MonoBehaviour
         transform.Translate(speedX/20, 0, 0);
     }
 
-    private void Movement(float horizontalInput)
-    {
-        rb.AddForce(new Vector2(horizontalInput * speedX * Time.deltaTime, 0));
-    }
+    
 }

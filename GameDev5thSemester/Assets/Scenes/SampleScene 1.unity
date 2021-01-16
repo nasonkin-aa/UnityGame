@@ -1192,6 +1192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd44c60e67e52c4c94a9242d551b609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimMiniGaem: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!61 &295393190
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1688,6 +1690,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd44c60e67e52c4c94a9242d551b609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimMiniGaem: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!61 &354972154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1779,6 +1783,7 @@ GameObject:
   - component: {fileID: 362874482}
   - component: {fileID: 362874481}
   - component: {fileID: 362874480}
+  - component: {fileID: 362874487}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1871,11 +1876,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362874479}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95b0fdc4a2876ab4ab094337872b03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 0
+  joystick: {fileID: 0}
 --- !u!212 &362874485
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1940,6 +1947,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &362874487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362874479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fcc5397fc1554f49859b5114ba14412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &391556504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,7 +2234,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &396170635
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3154,6 +3173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd44c60e67e52c4c94a9242d551b609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimMiniGaem: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!61 &587076525
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4753,7 +4774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -301.99997}
+  m_AnchoredPosition: {x: 0, y: -302}
   m_SizeDelta: {x: 1049.7192, y: 521.0806}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &976653944
@@ -7255,7 +7276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85eac27ec1932764388008ee3950da5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 5
 --- !u!114 &1526241979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8417,6 +8437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dd44c60e67e52c4c94a9242d551b609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimMiniGaem: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!61 &1713810760
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4,43 +4,37 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float horizontalSpeed;
-    float speedX;
-    private Rigidbody2D rb;
-    float PosX;
+    Rigidbody2D rigidbody2d;
+    private bool FacingRight = true;
 
-
+    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
-    public void LeftButtonDown()
+    // Update is called once per frame
+    void Update()
     {
-        speedX = -horizontalSpeed;
-        
+        float horizontal = Input.GetAxis("Horizontal"); //объявляем переменную,которая берет значение из настроек управления
+        Vector3 position = rigidbody2d.position;
+        position.x = position.x + 21f * horizontal * Time.deltaTime;
+        rigidbody2d.MovePosition(position);
+        if (FacingRight == false && horizontal > 0)
+        {
+            Flip();
+        }
+        else if (FacingRight == true && horizontal < 0)
+        {
+            Flip();
+        }
     }
 
-    public void RightButtonDown()
+    void Flip()
     {
-        speedX = horizontalSpeed;
+        FacingRight = !FacingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        speedX = 0;
-    }
-
-    public void Stop()
-    {
-        speedX = 0;
-    }
-
-    void FixedUpdate()
-    {
-        PosX = transform.position.x;
-        transform.Translate(speedX/20, 0, 0);
-    }
-
-    
 }

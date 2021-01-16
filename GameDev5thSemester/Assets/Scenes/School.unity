@@ -4318,6 +4318,7 @@ GameObject:
   - component: {fileID: 396170634}
   - component: {fileID: 396170636}
   - component: {fileID: 396170637}
+  - component: {fileID: 396170638}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4415,12 +4416,12 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -4479,6 +4480,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51ba2611a2f49644b9c059de9c7fbe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &396170638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396170630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fcc5397fc1554f49859b5114ba14412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &413022816 stripped
@@ -24292,7 +24305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85eac27ec1932764388008ee3950da5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 3
 --- !u!50 &1016533563
 Rigidbody2D:
   serializedVersion: 4
@@ -27434,6 +27446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244951745}
   - component: {fileID: 1244951744}
+  - component: {fileID: 1244951746}
   - component: {fileID: 1244951743}
   - component: {fileID: 1244951747}
   - component: {fileID: 1244951746}
@@ -27476,10 +27489,11 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 10
+  far clip plane: 5000
   field of view: 40
   orthographic: 1
   orthographic size: 11.406148
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -27492,7 +27506,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &1244951745
@@ -27504,6 +27518,7 @@ Transform:
   m_GameObject: {fileID: 1244951742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.9, y: -5.3, z: 0}
+  m_LocalPosition: {x: 19.42, y: -29.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27526,6 +27541,7 @@ MonoBehaviour:
   skin: {fileID: 11400000, guid: fb83ac25d24f95c4d9298f3927cf6580, type: 2}
   answers: []
 --- !u!114 &1244951747
+--- !u!114 &1244951746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27537,11 +27553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912a3c1a742067a48bca71e463c782c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  face: 0
-  smooth: 2.5
-  offset: 0
-  boundsMap: {fileID: 0}
-  useBounds: 1
+  offset: {x: 2, y: 1}
+  faceLeft: 0
 --- !u!4 &1245642444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5944355825100859620, guid: 88e2979e6d7600940a6938379b50febe,

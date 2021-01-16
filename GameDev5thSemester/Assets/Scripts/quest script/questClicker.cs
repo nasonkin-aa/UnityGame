@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class questClicker : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animator startAnim;
+    public GameObject anim;
+    public static GameObject gameanim;
+    public string questname;
+
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player") && PlayerPrefs.GetInt(questname) == 1)
+        {
+            startAnim.SetBool("startOpen", true);
+            gameanim = anim;
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerExit2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            startAnim.SetBool("startOpen", false);
+        }
     }
 }

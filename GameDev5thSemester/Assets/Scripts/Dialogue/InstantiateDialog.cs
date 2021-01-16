@@ -24,7 +24,7 @@ public class InstantiateDialog : MonoBehaviour
 
     void Update()
     {
-        //UpdateAnswers();
+        UpdateAnswers();
     }
 
     void UpdateAnswers()

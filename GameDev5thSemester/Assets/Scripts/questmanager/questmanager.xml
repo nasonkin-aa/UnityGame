@@ -1,0 +1,13 @@
+<dialogue>
+    <node>
+        <npctext>Что нужно сдать:</npctext>
+        <answers>
+            <answer tonode = "0" needquestvalue = "0"><text>Зачёт по математике.</text><questname>testMath</questname></answer>
+			<answer tonode = "0" needquestvalue = "1"><text>Зачёт по математике.</text><questname>testMath</questname></answer>
+            <answer tonode = "0" needquestvalue = "0"><text>Зачёт по физике.</text><questname>testPhysics</questname></answer>
+			<answer tonode = "0" needquestvalue = "1"><text>Зачёт по физике.</text><questname>testPhysics</questname></answer>
+            <answer tonode = "0" needquestvalue = "0"><text>Зачёт по географии.</text><questname>testGeography</questname></answer>
+			<answer tonode = "0" needquestvalue = "1"><text>Зачёт по географии.</text><questname>testGeography</questname></answer>
+		</answers>
+    </node>
+</dialogue>

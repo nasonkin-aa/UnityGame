@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using static Button;
+
 public class ButtonTrigger: MonoBehaviour
 {
 
-    
     public static GameObject frame;
     public static GameObject frame1;
     public GameObject[] OtheFrame;

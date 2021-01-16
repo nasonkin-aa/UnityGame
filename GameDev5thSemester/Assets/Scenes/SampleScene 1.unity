@@ -5916,11 +5916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912a3c1a742067a48bca71e463c782c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  face: 0
-  smooth: 2.5
-  offset: 0
-  boundsMap: {fileID: 0}
-  useBounds: 1
+  offset: {x: 2, y: 1}
+  faceLeft: 0
 --- !u!1 &1245528465
 GameObject:
   m_ObjectHideFlags: 0
@@ -7554,13 +7551,13 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.3
+  m_EdgeRadius: 0.14
   m_Points:
-  - {x: 395.74, y: -225.1}
-  - {x: 395.74, y: 113.63}
-  - {x: -398.8, y: 113.63}
-  - {x: -398.8, y: -214.45}
-  - {x: 401.8, y: -228.2}
+  - {x: 403.9, y: -227.9}
+  - {x: 402.5, y: 113.63}
+  - {x: -406.8, y: 113.63}
+  - {x: -406.6, y: -230.2}
+  - {x: 401.8, y: -229.34}
 --- !u!50 &1555046542
 Rigidbody2D:
   serializedVersion: 4

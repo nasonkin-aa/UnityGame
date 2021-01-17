@@ -1,0 +1,8 @@
+<dialogue>
+    <node>
+        <npctext>Я на данный момент нахожусь в кабинете директора.</npctext>
+        <answers>
+            <answer tonode = "0" needquestvalue = "0" questvalue = "1"><text>Далее...</text><dialend>true</dialend><questname>questNumbers</questname></answer>
+		</answers>
+    </node>
+</dialogue>

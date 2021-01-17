@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class NPC_Task2 : MonoBehaviour
 {
-    public Quest_Event QE;
 
     // Use this for initialization
     void Start()
@@ -22,7 +21,6 @@ public class NPC_Task2 : MonoBehaviour
         if (col.tag == "Coin")
         {
             Destroy(col.gameObject);
-            QE.end_SubQuest2 = true;
             Score.scre += 15;
         }
     }

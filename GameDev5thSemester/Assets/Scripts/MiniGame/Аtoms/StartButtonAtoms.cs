@@ -17,12 +17,12 @@ public class StartButtonAtoms : MonoBehaviour
         Zone.SetActive(true);
         PressButton = true;
         StartButton.SetActive(false);
-        Instantiate(Atom,new Vector3(-5f,0f,1f),Quaternion.identity);
-        Instantiate(Atom, new Vector3(-5f, 5f, 1f), Quaternion.identity);
-        Instantiate(Atom, new Vector3(0f, 0f, 1f), Quaternion.identity);
-        Instantiate(Atom, new Vector3(5f, 5f, 1f), Quaternion.identity);
-        Instantiate(Atom, new Vector3(3f, -3f, 1f), Quaternion.identity);
-        Instantiate(Atom, new Vector3(6f, -3f, 1f), Quaternion.identity);
+        Instantiate(Atom,new Vector3(-16f,0f,1f),Quaternion.identity);
+        Instantiate(Atom, new Vector3(-14f, 4f, 1f), Quaternion.identity);
+        Instantiate(Atom, new Vector3(-5f, 1f, 1f), Quaternion.identity);
+        Instantiate(Atom, new Vector3(-6f, 5f, 1f), Quaternion.identity);
+        Instantiate(Atom, new Vector3(-10f, 3f, 1f), Quaternion.identity);
+        Instantiate(Atom, new Vector3(-12f, 2f, 1f), Quaternion.identity);
 
 
 

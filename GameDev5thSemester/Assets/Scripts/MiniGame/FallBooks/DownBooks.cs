@@ -6,18 +6,16 @@ public class DownBooks : MonoBehaviour
 {
     [SerializeField]
     private float fallSpeed = 3f;
-    int k;
     
     void Update()
     {
-        if (transform.position.y < -7f)
+        if (transform.position.y < -10f)
         {
+            Player.k += 1;
             Destroy(gameObject);
-            k++;
-            if (k == 1)
+            if (Player.k == 20)
             {
                 FindObjectOfType<Player>().GameWin();
-                FindObjectOfType<Player>().Destroy();
             }
         }
         transform.position -= new Vector3(0, fallSpeed * Time.deltaTime, 0);

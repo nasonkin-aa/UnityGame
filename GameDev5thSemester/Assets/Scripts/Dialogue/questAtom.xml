@@ -24,7 +24,7 @@
 	<node>
         <npctext>Отлично! Ты получил зачёт.</npctext>
         <answers>
-            <answer tonode = "0" needquestvalue = "2" questvalue = "3" rewardpoints = "40"><text>Ура!</text><dialend>true</dialend><questname>questAtom</questname></answer>
+            <answer tonode = "0" needquestvalue = "2" questvalue = "3" rewardpoints = "70"><text>Ура!</text><dialend>true</dialend><questname>questAtom</questname></answer>
         </answers>
     </node>
 </dialogue>

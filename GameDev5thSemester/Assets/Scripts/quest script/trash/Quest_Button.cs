@@ -6,6 +6,8 @@ public class Quest_Button : MonoBehaviour
 {
 
     public Animator AnimMiniGaem;
+    public string questname;
+    public int flag;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +22,34 @@ public class Quest_Button : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (PlayerPrefs.GetInt ("questClicker") == 1)
+        if (flag == 0)
         {
-            PlayerPrefs.SetInt ("questClicker", 2);
+            if (PlayerPrefs.GetInt(questname) == 1)
+            {
+                PlayerPrefs.SetInt(questname, 2);
+            }
         }
+        else if (flag == 1)
+        {
+            if (PlayerPrefs.GetInt(questname) == 0)
+            {
+                PlayerPrefs.SetInt(questname, 1);
+            }
+        }
+        else if (flag == 2)
+        {
+            if (PlayerPrefs.GetInt(questname) == 2)
+            {
+                PlayerPrefs.SetInt(questname, 3);
+            }
+        }
+        if (questname == "questClicker")
+        {
+            Score.scre += 30;
+        }
+
         AnimMiniGaem.SetTrigger("IsTriggered");
+        NewController.MiniGameStatus = false;
+        InstantiateQuestList.flag = true;
     }
 }

@@ -72,9 +72,6 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
-
-        ButtonExit = GameObject.Find("ButtonExit");
-        ButtonExit.SetActive(false);
         Vector3 startPos = originalCard.transform.position;
         int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
         numbers = ShuffleArray(numbers);

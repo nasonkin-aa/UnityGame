@@ -8,6 +8,20 @@
 			<answer tonode = "0" needquestvalue = "1"><text>Зачёт по физике.</text><questname>testPhysics</questname></answer>
             <answer tonode = "0" needquestvalue = "0"><text>Зачёт по географии.</text><questname>testGeography</questname></answer>
 			<answer tonode = "0" needquestvalue = "1"><text>Зачёт по географии.</text><questname>testGeography</questname></answer>
+			<answer tonode = "0" needquestvalue = "0"><text>Зачёт по информатике.</text><questname>questMemory</questname></answer>
+			<answer tonode = "0" needquestvalue = "1"><text>Зачёт по информатике.</text><questname>questMemory</questname></answer>
+			<answer tonode = "0" needquestvalue = "2"><text>Зачёт по информатике.</text><questname>questMemory</questname></answer>
+			<answer tonode = "0" needquestvalue = "0"><text>Зачёт по химии.</text><questname>questAtom</questname></answer>
+			<answer tonode = "0" needquestvalue = "1"><text>Зачёт по химии.</text><questname>questAtom</questname></answer>
+			<answer tonode = "0" needquestvalue = "2"><text>Зачёт по химии.</text><questname>questAtom</questname></answer>
+			<answer tonode = "0" needquestvalue = "0"><text>Зачёт по музыке.</text><questname>questNumbers</questname></answer>
+			<answer tonode = "0" needquestvalue = "1"><text>Зачёт по музыке.</text><questname>questNumbers</questname></answer>
+			<answer tonode = "0" needquestvalue = "2"><text>Зачёт по музыке.</text><questname>questNumbers</questname></answer>
+			<answer tonode = "0" needquestvalue = "3"><text>Зачёт по музыке.</text><questname>questNumbers</questname></answer>
+			<answer tonode = "0" needquestvalue = "0"><text>Зачёт по литературе.</text><questname>questFallBooks</questname></answer>
+			<answer tonode = "0" needquestvalue = "1"><text>Зачёт по литературе.</text><questname>questFallBooks</questname></answer>
+			<answer tonode = "0" needquestvalue = "2"><text>Зачёт по литературе.</text><questname>questFallBooks</questname></answer>
+			<answer tonode = "0" needquestvalue = "3"><text>Зачёт по литературе.</text><questname>questFallBooks</questname></answer>
 		</answers>
     </node>
 </dialogue>

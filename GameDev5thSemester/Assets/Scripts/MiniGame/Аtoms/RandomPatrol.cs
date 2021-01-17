@@ -23,7 +23,7 @@ public class RandomPatrol : MonoBehaviour
         TargetPosition = GetRandomPosition();
         //startButtonAtoms = GameObject.Find("ButtonStart").GetComponent<StartButtonAtoms>();
         teatherAtoms = GameObject.Find("AtomController").GetComponent<TeatherAtoms>();
-        timerAtoms = GameObject.Find("Score").GetComponent<TimerAtoms>();
+        timerAtoms = GameObject.FindWithTag("ScoreAtom").GetComponent<TimerAtoms>();
     }
     void FixedUpdate()
     {

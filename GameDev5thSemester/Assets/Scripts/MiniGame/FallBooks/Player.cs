@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     public static bool lose = false;
     public GameObject[] X;
+    public static int k = 0;
 
     public GameObject win;
     public GameObject FailGame;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
             Destroy();
             EndZone.SetActive(true);
             FailGame.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 
@@ -37,6 +39,7 @@ public class Player : MonoBehaviour
 
     public void Restart()
     {
+        gameObject.SetActive(true);
         lose = false;
         FailGame.SetActive(false);
         EndZone.SetActive(false);
@@ -48,6 +51,7 @@ public class Player : MonoBehaviour
         lose = true;
         EndZone.SetActive(true);
         win.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void ExitPressed()

@@ -4,8 +4,9 @@
         <answers>
             <answer tonode = "1" needquestvalue = "0"><text>Что мне нужно сделать, чтобы сдать зачёт?</text><questname>questFallBooks</questname></answer>
             <answer tonode = "0"><text>Я должен идти.</text><dialend>true</dialend></answer>
-			<answer tonode = "3" needquestvalue = "2"><text>Я принёс книгу!</text><questname>questFallBooks</questname></answer>
+			<answer tonode = "3" needquestvalue = "3"><text>Я принёс книгу!</text><questname>questFallBooks</questname></answer>
 			<answer tonode = "2" needquestvalue = "1"><text>Напомните моё задание, пожалуйста.</text><questname>questFallBooks</questname></answer>
+			<answer tonode = "2" needquestvalue = "2"><text>Напомните моё задание, пожалуйста.</text><questname>questFallBooks</questname></answer>
 		</answers>
     </node>
     <node>
@@ -24,7 +25,7 @@
 	<node>
         <npctext>Спасибо! Вот твой зачёт.</npctext>
         <answers>
-            <answer tonode = "0" needquestvalue = "2" questvalue = "3" rewardpoints = "40"><text>Ура!</text><dialend>true</dialend><questname>questFallBooks</questname></answer>
+            <answer tonode = "0" needquestvalue = "3" questvalue = "4" rewardpoints = "50"><text>Ура!</text><dialend>true</dialend><questname>questFallBooks</questname></answer>
         </answers>
     </node>
 </dialogue>

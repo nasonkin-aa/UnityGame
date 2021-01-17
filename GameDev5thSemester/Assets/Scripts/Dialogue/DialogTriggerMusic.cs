@@ -12,7 +12,7 @@ public class DialogTriggerMusic : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && PlayerPrefs.GetInt(questname) == 1)
+        if (other.CompareTag("Player") && PlayerPrefs.GetInt(questname) > 0)
         {
             startAnim.SetBool("startOpen", true);
             musician.GetComponent<FollowPathMusic>().flag = false;

@@ -7,6 +7,7 @@ public class InstantiateQuestList : MonoBehaviour
     public TextAsset ta;
     public Dialog dialog;
     public int currentNode;
+    public static bool flag = true;
 
     public GUISkin skin;
 
@@ -36,12 +37,15 @@ public class InstantiateQuestList : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.skin = skin;
-        GUI.Box(new Rect(20, Screen.height / 2 - 350, 350, 500), "", skin.box);
-        GUI.Label(new Rect(60, Screen.height / 2 - 350, 310, 60), dialog.nodes[currentNode].NpcText);
-        for (int i = 0; i < answers.Count; i++)
+        if (flag)
         {
-            GUI.Label(new Rect(35, Screen.height / 2 - 300 + 40 * i, 360, 40), answers[i].text, skin.label);
+            GUI.skin = skin;
+            GUI.Box(new Rect(20, Screen.height / 2 - 350, 350, 380), "", skin.box);
+            GUI.Label(new Rect(60, Screen.height / 2 - 350, 310, 60), dialog.nodes[currentNode].NpcText);
+            for (int i = 0; i < answers.Count; i++)
+            {
+                GUI.Label(new Rect(35, Screen.height / 2 - 300 + 40 * i, 360, 40), answers[i].text, skin.label);
+            }
         }
     }
 }

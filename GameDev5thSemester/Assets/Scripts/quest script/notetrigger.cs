@@ -18,6 +18,7 @@ public class notetrigger : MonoBehaviour
         if (PlayerPrefs.GetInt(questname) == 0)
         {
             IN.ShowDialogue = true;
+            gameObject.GetComponent<Animator>().SetBool("startOpen", false);
         }
     }
 

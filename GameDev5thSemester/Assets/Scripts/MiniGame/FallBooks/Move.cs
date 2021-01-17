@@ -6,7 +6,8 @@ public class Move : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
     private bool FacingRight = true;
-    public bool ZoneActive;
+    public static bool ZA = false;
+    public bool ZoneActive = ZA;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,8 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ZoneActive == true)
+        ZoneActive = ZA;
+        if (ZoneActive)
         {
             float horizontal = Input.GetAxis("Horizontal"); //объявляем переменную,которая берет значение из настроек управления
             Vector3 position = rigidbody2d.position;

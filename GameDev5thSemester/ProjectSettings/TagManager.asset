@@ -19,6 +19,9 @@ TagManager:
   - Book
   - Zone
   - FBPlayer
+  - ScoreAtom
+  - book1
+  - teacher
   layers:
   - Default
   - TransparentFX

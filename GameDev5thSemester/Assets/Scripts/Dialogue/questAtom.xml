@@ -1,0 +1,30 @@
+<dialogue>
+    <node>
+        <npctext>Здравствуй.</npctext>
+        <answers>
+            <answer tonode = "1" needquestvalue = "0"><text>Что мне нужно сделать, чтобы сдать зачёт?</text><questname>questAtom</questname></answer>
+            <answer tonode = "0"><text>Я должен идти.</text><dialend>true</dialend></answer>
+			<answer tonode = "3" needquestvalue = "2"><text>У меня получилось!</text><questname>questAtom</questname></answer>
+			<answer tonode = "2" needquestvalue = "1"><text>Напомните моё задание, пожалуйста.</text><questname>questAtom</questname></answer>
+		</answers>
+    </node>
+    <node>
+        <npctext>Ого, давно я тебя не видела! Тебе необходимо как можно дольше не позволить атомам столкнуться.</npctext>
+        <answers>
+            <answer tonode = "0" questvalue = "1"><text>Думаю, я справлюсь.</text><dialend>true</dialend><questname>questAtom</questname></answer>
+            <answer tonode = "0"><text>Наверное, попозже.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Подойди к стойке с колбами и не позволяй атомам столкнуться.</npctext>
+        <answers>
+            <answer tonode = "0"><text>Точно! Скоро сделаю.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Отлично! Ты получил зачёт.</npctext>
+        <answers>
+            <answer tonode = "0" needquestvalue = "2" questvalue = "3" rewardpoints = "40"><text>Ура!</text><dialend>true</dialend><questname>questAtom</questname></answer>
+        </answers>
+    </node>
+</dialogue>

@@ -12,9 +12,7 @@ public class ZoneMouse : MonoBehaviour
     }
     void OnMouseExit()
     {
-       
         Zone = false;
-
     }
 
     

@@ -8,7 +8,6 @@ public class InstantiateDialog : MonoBehaviour
     public Dialog dialog;
     public int currentNode;
     public bool ShowDialogue;
-    public GameObject controller;
 
     public GUISkin skin;
 
@@ -16,7 +15,6 @@ public class InstantiateDialog : MonoBehaviour
 
     void Start()
     {
-        controller = GameObject.Find("Сontroller");
         dialog = Dialog.Load(ta);
         skin = Resources.Load("Skin") as GUISkin;
         UpdateAnswers();
@@ -42,7 +40,6 @@ public class InstantiateDialog : MonoBehaviour
         GUI.skin = skin;
         if (ShowDialogue)
         {
-            controller.SetActive(false);
             GUI.Box(new Rect(Screen.width / 2 - 640, Screen.height - 600, 1280, 690), "", skin.box);
             GUI.Label(new Rect(Screen.width / 2 - 560, Screen.height - 450, 1260, 120), dialog.nodes[currentNode].NpcText);
             for (int i = 0; i < answers.Count; i++)
@@ -65,10 +62,6 @@ public class InstantiateDialog : MonoBehaviour
                     UpdateAnswers();
                 }
             }
-        }
-        else
-        {
-            controller.SetActive(true);
         }
     }
 }

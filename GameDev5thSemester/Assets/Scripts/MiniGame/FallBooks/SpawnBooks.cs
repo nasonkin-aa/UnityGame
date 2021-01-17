@@ -4,7 +4,7 @@ using UnityEngine;
 public class SpawnBooks : MonoBehaviour
 {
     public GameObject book;
-
+    public NewController newController;
     
     public void StartSpawn()
     {

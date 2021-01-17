@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     public GameObject win;
     public GameObject FailGame;
-    public GameObject FallGame;
+    public GameObject EndZone;
     //public GameObject restart;
     //public GameObject end;
 
@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
         {
             lose = true;
             Destroy();
+            EndZone.SetActive(true);
             FailGame.SetActive(true);
         }
     }
@@ -38,18 +39,20 @@ public class Player : MonoBehaviour
     {
         lose = false;
         FailGame.SetActive(false);
+        EndZone.SetActive(false);
         FindObjectOfType<SpawnBooks>().StartSpawn();
     }
 
     public void GameWin()
     {
         lose = true;
+        EndZone.SetActive(true);
         win.SetActive(true);
     }
 
     public void ExitPressed()
     {
-        FallGame.SetActive(false);
+        EndZone.SetActive(false);
         FailGame.SetActive(false);
     }
 

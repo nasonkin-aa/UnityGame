@@ -16,6 +16,9 @@ TagManager:
   - MGBPlaeyr
   - MGBStartButton
   - Atom
+  - Book
+  - Zone
+  - FBPlayer
   layers:
   - Default
   - TransparentFX

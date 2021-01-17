@@ -1,0 +1,30 @@
+<dialogue>
+    <node>
+        <npctext>Здравствуй.</npctext>
+        <answers>
+            <answer tonode = "1" needquestvalue = "1"><text>Вот вы где! Что нужно для зачёта?</text><questname>questNumbers</questname></answer>
+            <answer tonode = "0"><text>Я должен идти.</text><dialend>true</dialend></answer>
+			<answer tonode = "3" needquestvalue = "3"><text>Я сделал как вы сказали.</text><questname>questNumbers</questname></answer>
+			<answer tonode = "2" needquestvalue = "2"><text>Напомните моё задание, пожалуйста.</text><questname>questNumbers</questname></answer>
+		</answers>
+    </node>
+    <node>
+        <npctext>Да да, сходи в мой класс, поиграй на инструментах.</npctext>
+        <answers>
+            <answer tonode = "0" needquestvalue = "1" questvalue = "2"><text>Ну, хорошо.</text><dialend>true</dialend><questname>questNumbers</questname></answer>
+            <answer tonode = "0"><text>Наверное, попозже.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>Забыл что-ли? В моём кабинете есть колонка, можешь воспользоваться.</npctext>
+        <answers>
+            <answer tonode = "0"><text>Точно! Я пошёл.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+	<node>
+        <npctext>ОК! Ты получил зачёт.</npctext>
+        <answers>
+            <answer tonode = "0" needquestvalue = "3" questvalue = "4" rewardpoints = "80"><text>Ура!</text><dialend>true</dialend><questname>questNumbers</questname></answer>
+        </answers>
+    </node>
+</dialogue>

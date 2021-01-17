@@ -6,7 +6,6 @@ public class questTriggerBut : MonoBehaviour
 {
     public static InstantiateDialog ID;
     public bool pressed;
-    public GameObject controller;
 
     void Start()
     {
@@ -15,8 +14,7 @@ public class questTriggerBut : MonoBehaviour
 
     public void TriggerGame()
     {
-        controller.SetActive(false);
-        questClicker.gameanim.GetComponent<Animator>().SetTrigger("IsTriggered");
+        questtrigger.gameanim.GetComponent<Animator>().SetTrigger("IsTriggered");
     }
 }
 

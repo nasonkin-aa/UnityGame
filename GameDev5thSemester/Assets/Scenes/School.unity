@@ -2755,7 +2755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.7, y: 10.1}
+  m_AnchoredPosition: {x: -145.87, y: 28}
   m_SizeDelta: {x: 54.04796, y: 64.688255}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &274750504
@@ -3603,7 +3603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &329791740
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4282,7 +4282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &395144135
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27530,7 +27530,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 11.406148
+  orthographic size: 6.7225237
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -35403,14 +35403,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034738139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -11.3, z: -129}
-  m_LocalScale: {x: 31.44068, y: 31.44068, z: 11.318643}
+  m_LocalPosition: {x: -2.7, y: -10.9, z: -129}
+  m_LocalScale: {x: 50, y: 50, z: 11.318643}
   m_Children: []
   m_Father: {fileID: 180382250}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &2034738141
-CircleCollider2D:
+--- !u!61 &2034738141
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -35422,9 +35422,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017449088, y: 0}
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.53125}
+    newSize: {x: 0.88, y: 0.73}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.3362349
+  m_Size: {x: 1, y: 1.53125}
+  m_EdgeRadius: 0
 --- !u!114 &2034738142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35438,13 +35448,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 0
-  TimeStart: 3
-  MaxScore: 10
+  TimeStart: 6
+  MaxScore: 30
   ScoreLabel: {fileID: 274750501}
   TimeLabel: {fileID: 576697302}
   Circle: {fileID: 2034738139}
   ButtonExit: {fileID: 610981494}
-  FirstCircle: {x: 100, y: 100, z: 0}
+  FirstCircle: {x: 50, y: 50, z: 0}
   TimerCheck: 0
 --- !u!212 &2034738143
 SpriteRenderer:
@@ -35485,7 +35495,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: bb9b3c3940a0a5d4dbff6ee44e093a16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61ffc263aab1c2447809dcc213a0e9fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

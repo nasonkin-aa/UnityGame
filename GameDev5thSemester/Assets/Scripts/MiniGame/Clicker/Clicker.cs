@@ -7,27 +7,36 @@ public class Clicker : MonoBehaviour
 {
     public int Score = 0;
     public float TimeStart = 3f;
-    public int MaxScore=10;
+    public int MaxScore=20;
     [SerializeField] private TextMesh ScoreLabel;
     [SerializeField] private TextMesh TimeLabel;
     public GameObject Circle;
     public GameObject ButtonExit;
-    public Vector3 FirstCircle = new Vector3(100f, 100f, 0);
+    public Vector3 FirstCircle = new Vector3(50f, 50f, 0);
+    
 
     
     public bool TimerCheck = false;
 
     public void OnMouseDown()
-    {
-        
+    {   
         if (Score < MaxScore)
         {
             Score++;
-            Circle.transform.localScale += new Vector3(10f, 15f, 0);
+          
+            Circle.transform.rotation =  Quaternion.Euler(0, 0, 10);
+            //Circle.transform.localScale += new Vector3(10f, 15f, 0);
+        }    
+    }
+    public void OnMouseUp()
+    {
+        if (Score < MaxScore)
+        {
             
+            Circle.transform.rotation = Quaternion.Euler(0, 0, -10);
+            //Circle.transform.localScale += new Vector3(10f, 15f, 0);
+
         }
-       
-       
     }
     public void ScoreClick()
     {
@@ -49,14 +58,14 @@ public class Clicker : MonoBehaviour
 
         if (Score == MaxScore)
         {
-            Circle.gameObject.GetComponent<Renderer>().material.color = Color.red;
+            //Circle.gameObject.GetComponent<Renderer>().material.color = Color.red;
             TimerCheck = false;
             ButtonExit.SetActive(true);
 
         }
         else if(Score > 0)
         {
-
+            Circle.transform.rotation = Quaternion.Euler(0, 0, 0);
             TimerCheck = true;
             
         }
@@ -71,7 +80,7 @@ public class Clicker : MonoBehaviour
             if (TimeStart <= 0.00f)
             {
                 Score = 0;
-                TimeStart = 3f;
+                TimeStart = 5f;
                 Circle.transform.localScale = FirstCircle;
             }
             else

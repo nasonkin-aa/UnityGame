@@ -11,26 +11,10 @@ public class Timer : MonoBehaviour
     public GameObject Lose;
 
 
-    void Start()
-    {
-        timer.text = timeStart.ToString(); //Конвертируем timeStart в стринг
-    }
-
-    void Update()
-    {
-        if (timeStart > 0)
-        {
-            timeStart -= Time.deltaTime; //время на таймере уменьшается апдейт срабатывает каждый кадр, дельтатайм время между кадрами
-            timer.text = Mathf.Round(timeStart).ToString();//добавляем округление
-        }
-        else
-        {
-            Lose.SetActive(true);
-        }
-    }
+   
 
     public void TryAgain()
     {
-        SceneManager.LoadScene("SampleScene 1");
+        SceneManager.LoadScene("School");
     }
 }

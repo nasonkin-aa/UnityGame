@@ -31,7 +31,7 @@ public class CharNumbers : MonoBehaviour
             Instantiate(Projectiles[2], transform.position, Quaternion.identity);
             Num = 0;
         }
-        if (ScoreNum == 3)
+        if (ScoreNum == 10)
         {
             ButtonEnd.SetActive(true);
         }

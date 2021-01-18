@@ -53,6 +53,7 @@ public class InstantiateDialog : MonoBehaviour
                     if (answers[i].end == "true")
                     {
                         ShowDialogue = false;
+                        NewController.MiniGameStatus = false;
                     }
                     if (answers[i].RewardPoints > 0)
                     {

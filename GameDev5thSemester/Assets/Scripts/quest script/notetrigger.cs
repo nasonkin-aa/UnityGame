@@ -17,6 +17,7 @@ public class notetrigger : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(questname) == 0)
         {
+            NewController.MiniGameStatus = true;
             IN.ShowDialogue = true;
             gameObject.GetComponent<Animator>().SetBool("startOpen", false);
         }

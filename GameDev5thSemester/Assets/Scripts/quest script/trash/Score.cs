@@ -1,27 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Score :MonoBehaviour
 {
 
     public static int scre;
-    public static GUIStyle razmer;
-
-    void Start()
+  
+    void Update()
     {
-        razmer = new GUIStyle();
-
-        razmer.fontSize = 30;
+        if (scre == 300)
+        {
+            Time.timeScale = 0;
+            gameObject.SetActive(false);
+            SceneManager.LoadScene("LoadScene 1");
+            scre += 1;
+        }
     }
 
-    void OnGUI()
-    {
-        GUI.Label(new Rect(1030, 40, 100, 100), "Score: " + scre, razmer);
-    }
-
-    static void Update()
-    {
-        
-    }
+    
 }

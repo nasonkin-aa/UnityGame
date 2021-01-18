@@ -10,7 +10,7 @@ public class note : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && PlayerPrefs.GetInt(questname) == 0)
+        if (other.CompareTag("Player"))
         {
             startAnim.SetBool("startOpen", true);
             notetrigger.IN = gameObject.GetComponent<InstantiateNote>();

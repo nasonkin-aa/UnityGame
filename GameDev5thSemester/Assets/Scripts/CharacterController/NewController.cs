@@ -22,8 +22,8 @@ public class NewController : MonoBehaviour
             float horizontal = Input.GetAxis("Horizontal"); //объявляем переменную,которая берет значение из настроек управления
             float vertikal = Input.GetAxis("Vertical");
             Vector3 position = rigidbody2d.position;
-            position.x = position.x + 14f * horizontal * Time.deltaTime;
-            position.y = position.y + 14f * vertikal * Time.deltaTime;
+            position.x = position.x + 10f * horizontal * Time.deltaTime;
+            position.y = position.y + 10f * vertikal * Time.deltaTime;
             rigidbody2d.MovePosition(position);
             if (FacingRight == false && horizontal > 0)
             {

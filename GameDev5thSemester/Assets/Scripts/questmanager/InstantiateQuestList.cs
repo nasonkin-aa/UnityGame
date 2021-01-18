@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.SceneManagement;
 public class InstantiateQuestList : MonoBehaviour
 {
     public TextAsset ta;
     public Dialog dialog;
     public int currentNode;
     public static bool flag = true;
-
+    
     public GUISkin skin;
 
     public List<Answer> answers = new List<Answer>();
@@ -23,6 +23,18 @@ public class InstantiateQuestList : MonoBehaviour
     void Update()
     {
         UpdateAnswers();
+        if ((PlayerPrefs.GetInt("testMath") == 2) &&
+            (PlayerPrefs.GetInt("testPhysics") == 2) &&
+            PlayerPrefs.GetInt("testGeography") == 2 &&
+            PlayerPrefs.GetInt("questMemory") == 3 && 
+            PlayerPrefs.GetInt("questAtom") == 3 &&
+            PlayerPrefs.GetInt("questNumbers") == 4 &&
+            PlayerPrefs.GetInt("questFallBooks") == 4)
+        {
+            
+            SceneManager.LoadScene("LoadScene 1");
+        }
+       
     }
 
     void UpdateAnswers()
@@ -33,6 +45,7 @@ public class InstantiateQuestList : MonoBehaviour
             if (dialog.nodes[currentNode].answers[i].QuestName == null || dialog.nodes[currentNode].answers[i].NeedQuestValue == PlayerPrefs.GetInt(dialog.nodes[currentNode].answers[i].QuestName))
                 answers.Add(dialog.nodes[currentNode].answers[i]);
         }
+        
     }
 
     void OnGUI()

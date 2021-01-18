@@ -44,12 +44,12 @@ public class RandomPatrol : MonoBehaviour
         }
         if (timerAtoms.TimeStart > 10f )
         {
-            speed = 1.3f;
+            speed = 1.2f;
            
         }
         if (timerAtoms.TimeStart > 15f)
         {
-            speed = 1.7f;
+            speed = 1.4f;
         }
 
 

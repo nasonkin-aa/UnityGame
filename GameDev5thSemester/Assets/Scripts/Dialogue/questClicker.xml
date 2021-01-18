@@ -4,7 +4,7 @@
         <answers>
             <answer tonode = "1" needquestvalue = "0"><text>Что мне нужно сделать, чтобы сдать зачёт?</text><questname>questMemory</questname></answer>
             <answer tonode = "0"><text>Я должен идти.</text><dialend>true</dialend></answer>
-			<answer tonode = "3" needquestvalue = "2"><text>Я справился!</text><questname>questClicker</questname></answer>
+			<answer tonode = "3" needquestvalue = "2"><text>Я справился!</text><questname>questMemory</questname></answer>
 			<answer tonode = "2" needquestvalue = "1"><text>Напомните моё задание, пожалуйста.</text><questname>questMemory</questname></answer>
 		</answers>
     </node>

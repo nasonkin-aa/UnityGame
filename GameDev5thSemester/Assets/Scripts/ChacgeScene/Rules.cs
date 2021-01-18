@@ -8,11 +8,12 @@ public class Rules : MonoBehaviour
 
     public void Rul()
     {
-        rulesAnim.SetBool("rulesOpen", true);
+        rulesAnim.SetTrigger("IsTriggered");
     }
 
     public void Back()
     {
-        rulesAnim.SetBool("rulesOpen", false);
+        rulesAnim.SetTrigger("IsTriggered");
     }
+
 }

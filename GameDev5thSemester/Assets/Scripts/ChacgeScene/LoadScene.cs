@@ -7,6 +7,6 @@ public class LoadScene : MonoBehaviour
 {
 	public void ChangeScene(string sceneName)
 	{
-		SceneManager.LoadScene(2);
+		SceneManager.LoadScene("School");
 	}
 }

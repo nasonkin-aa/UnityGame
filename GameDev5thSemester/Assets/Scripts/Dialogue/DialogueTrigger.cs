@@ -12,10 +12,12 @@ public class DialogueTrigger : MonoBehaviour
         
     }
 
+    
     public void TriggerDialogue()
     {
-
+        NewController.MiniGameStatus = true;
         ID.ShowDialogue = true;
+        gameObject.GetComponent<Animator>().SetBool("startOpen", false);
     }
 
 }

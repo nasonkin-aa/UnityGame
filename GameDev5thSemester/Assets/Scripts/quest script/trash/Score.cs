@@ -9,7 +9,7 @@ public class Score :MonoBehaviour
   
     void Update()
     {
-        if (scre == 300)
+        if (scre >= 300)
         {
             Time.timeScale = 0;
             gameObject.SetActive(false);
